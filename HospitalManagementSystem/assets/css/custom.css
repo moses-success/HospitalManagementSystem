@@ -1,0 +1,336 @@
+
+/*==============================================
+	GENERAL  STYLES    
+	=============================================*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height:30px;
+}
+
+
+
+ #wrapper {
+	width: 100%;
+	margin-top:50px;
+	 margin-left: 5px;
+	 margin-right:5px;
+	background-color:#efefef; 
+}
+.thumbnail{
+	width:180px;
+	height:120px;
+}
+#page-wrapper {
+	padding: 20px 20px;
+	min-height: 600px;
+	color:#efefef; 
+
+}
+
+#page-inner {
+	width:100%;
+	margin:0px 20px 10px 0px;
+	background-color:#fff!important;
+	padding:5px;
+	min-height:1050px;
+}
+	
+ 
+	
+.page-head-line {
+	font-weight: 900;
+	padding-bottom:10px;
+	text-transform: uppercase;
+	color:#0099cc;
+	font-size: 20px;
+	margin-bottom: 30px;
+	
+}
+
+
+.page-head-line ul{
+	list-style-type:none;
+	padding-bottom:10px;
+}
+
+.page-head-line label{
+	color:orangered;
+   
+}
+.page-head-line .doctor{
+	float:right;
+	margin-left: 10px;
+	text-align:center;
+	 
+}
+
+.page-head-line .doctor .numberd{
+	color:orangered;
+}
+
+.page-head-line .nurse{
+	 float:right;
+	 margin-left: 10px;
+	 text-align:center;
+ 
+
+}
+.page-head-line .patient{
+	float:right;
+	 margin-left: 10px;
+	 text-align:center;
+}
+.pad-top {
+	padding-top:15px;
+}
+/*==============================================
+	MENU STYLES    
+	=============================================*/
+
+.top-menu{
+	float:right;
+	margin-top:8px;
+
+}
+
+.top-menu .dropdown-menu{
+	color:#fff;
+	background-color:#0099cc;
+}
+
+	.top-menu .dropdown-menu > li > a:hover,
+	.top-menu .dropdown-menu > li > a:hover {
+		background-color: #1ac6ff !important;
+		outline: 0;
+	}
+
+.sidebar-collapse .tologo {
+	padding-top:10px;
+	background-color:#0099cc;
+	padding-left:60px;
+	  
+}
+.sidebar-collapse .nav {
+	background-color:#0099cc;
+	margin-top:-5px;
+	border-bottom:1px solid #efefef;
+   
+}
+
+.sidebar-collapse > .nav > li > a {
+	padding-top:10px;
+	color: #fff;
+	 font-size: 16px;
+}
+.sidebar-collapse > .nav > li {
+	   border-bottom:1px solid #efefef;
+	width:250px;
+}
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+	
+	 width: 250px;
+	background-color:#1ac6ff !important;
+	outline:0;
+
+}
+
+.navbar-side {
+	border:none;
+	padding-top: 10px;
+}
+.navbar-inverse {
+	margin-right:5px;
+ margin-left: 5px;
+background-color:#1ac6ff;
+border-color: #F0F0F0;
+
+}
+
+
+.nav > li > a > i {
+	margin-right:10px;
+	color:#fff;
+	font-size: 20px;
+}
+.nav >li > a{
+	margin-bottom: 1px;
+	margin-top: 0px;
+	height: 40px;
+	width:250px;
+	text-align: left;
+	
+}
+.Link{
+	font-size:20px;
+		color:#fff;
+   text-transform: uppercase
+}
+.adjust-nav > a {
+	float:right;
+	color:#fff;
+	margin-top:10px;
+	margin-right: 10px;
+	
+}
+#headertxt{
+	float: left;
+	margin-top: -10px;
+	font-size: 20px;
+	color: #fff;
+}
+	.logout-spn a {
+		text-decoration:none;
+	}
+
+ .logo{
+		border-radius:20px;
+		padding-left:20px;
+		padding:100px;
+	}
+ 
+.active-link {
+	background-color:#1ac6ff;
+	 width: 250px;
+	
+}
+
+/*==============================================
+	DASHBOARD STYLES    
+	=============================================*/
+.div-square {
+	padding-top:9px;
+	-webkit-border-radius:3px;
+   -moz-border-radius:3px;
+	border-radius:4px;
+	background-color:#0099cc;
+   padding-bottom:3px;
+   padding-right:2px;
+   height:120px;
+}
+
+	.div-square > a, .div-square > a .div-square > a, .div-square > a:focus {
+		color:#fff;
+		text-decoration: none;
+		
+	}
+.image {
+	
+	padding-bottom:300px;
+}
+
+.dropdown-menu{
+	background-color:#007acc;
+}
+
+
+.dropdown-menu > li > a:hover{
+	background-color:#1ac6ff !important;
+}
+
+/*==============================================
+	Department style   
+	=============================================*/
+
+	.table-header{
+		color:#0099cc;
+		font-size:25px;
+		 text-transform: uppercase;
+	}
+   .navtab .fa {
+		color:#1ac6ff;
+	}
+   .navtab a {
+	   color:#fff;
+   }
+   .navtab{
+	   background-color:#0099cc;
+	   font-size:20px;
+	   text-transform: uppercase;
+	   text-emphasis-color:#fff;
+   }
+   .showtxt{
+	   float:right;
+	   color:#0099cc;
+
+   }
+ 
+ .alert alert-danger{
+	 width:500px;
+	 height:20px;
+ }
+  .alert alert-success{
+	 width:500px;
+	 height:20px;
+ }
+
+  /*==============================================
+	Gridview style   
+	=============================================*/
+
+  #Label1{
+	  margin-bottom:10px;
+	  margin-top:10px;
+  }
+
+/*==============================================
+	FOOTER STYLES     
+	=============================================*/
+.footer {
+	background-color:#0099cc;
+	width:100%;
+	color:#fff;
+	padding:20px 50px 20px 50px;
+	 padding-left:20px;
+	 margin-top: -80px
+
+}
+
+
+	.footer > a, .footer>a:hover {
+	   
+		color:#fff;
+	}
+
+	.calender{
+		margin-left:50px;
+		margin:3px;
+	   
+	}
+
+
+	 hr {
+		width:250px;
+		margin-bottom:5px;
+	   
+	}
+
+
+
+
+/*==============================================
+	MEDIA QUERIES     
+	=============================================*/
+
+@media(min-width:800px) {
+	#page-wrapper {
+		margin: 10px 0px 0px 235px;
+		padding: 5px 25px;
+		min-height: 1090px;
+		padding-top: 10px;
+	   
+	}
+
+
+	.navbar-side {
+		z-index: 1;
+		position: absolute;
+		width: 250px;
+		background-color: #0099cc;
+		min-height:1090px;
+		margin-top:10px;
+		
+	}
+}
+
+
