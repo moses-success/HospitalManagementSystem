@@ -72,7 +72,7 @@
                                     <div class="tab-pane fade active in" id="Department">
 
                                         <div class="table-responsive">
-
+                                            <br />
                                             <div class="col-lg-12 col-md-12">
                                                 <asp:Label ID="successid" runat="server"></asp:Label>
                                                 <asp:Label ID="Label1" runat="server"></asp:Label>

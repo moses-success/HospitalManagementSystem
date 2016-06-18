@@ -52,8 +52,7 @@ namespace HospitalManagementSystem.DoctorAccount
                 command.ExecuteNonQuery();
                 Label1.Text = "Registration Successfull";
                 Label1.CssClass = "alert alert-success";
-                ClientScript.RegisterStartupScript(this.GetType(), "key", "launchModal();", true);
-
+             
             }
             catch (Exception ex)
             {

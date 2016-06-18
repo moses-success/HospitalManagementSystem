@@ -104,14 +104,9 @@ body {
 		outline: 0;
 	}
 
-.sidebar-collapse .tologo {
-	padding-top:10px;
-	background-color:#0099cc;
-	padding-left:60px;
-	  
-}
+
 .sidebar-collapse .nav {
-	background-color:#0099cc;
+	background-color:orangered;;
 	margin-top:-5px;
 	border-bottom:1px solid #efefef;
    
@@ -130,7 +125,7 @@ body {
 .sidebar-collapse .nav > li > a:focus {
 	
 	 width: 250px;
-	background-color:#1ac6ff !important;
+	background-color:#1b9703 !important;
 	outline:0;
 
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="DoctorDashboard" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DocDashBoard.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.DocDashBoard" %>
+﻿<%@ Page Title="Doctor Dashboard" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DocDashBoard.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.DocDashBoard" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 

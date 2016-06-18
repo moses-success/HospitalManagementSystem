@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HospitalManagementSystem.AdminAccount.Profile" %>
+﻿<%@ Page Title="Manage Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HospitalManagementSystem.AdminAccount.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
       <div id="wrapper">
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-12">
                     <h4 class="page-head-line">  Manage Profile
-                        <span class="doctor">Doctor</span><span class="patient">Patient</span><span class="nurse">Nurse</span>
+                      
                         </h4>
                          
       <div class="panel panel-default">
@@ -69,6 +69,7 @@
                                
                             </ul>
                                </div>
+                           <asp:Label ID="successid" runat="server"></asp:Label>
                            
                                        <asp:Label ID="Label1" runat="server"></asp:Label>
                                        <br />
@@ -116,6 +117,11 @@
                                </div>
                                        <div class="panel-adj">
                                            <br />
+
+
+                                            <asp:TextBox runat="server" ID="emailtxtp" CssClass="form-control" placeholder="Email" Width="600px" TextMode="Email" ViewStateMode="Disabled"></asp:TextBox>
+                                       <asp:RequiredFieldValidator ID="RequiredFieldVal1" runat="server" ForeColor="Red" ErrorMessage="Email Required" ControlToValidate="emailtxtp" ValidationGroup="manageprofile"></asp:RequiredFieldValidator>
+
                                        <br />
                                        
                                        <asp:TextBox runat="server" ID="passtxt" CssClass="form-control" placeholder="Password" Width="600px" TextMode="Password"></asp:TextBox>
