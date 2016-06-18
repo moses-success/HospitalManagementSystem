@@ -99,7 +99,7 @@
                                        <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator7" ControlToValidate="phonetxt" ErrorMessage="Phone Number Required" ForeColor="Red" ValidationGroup="doc" ></asp:RequiredFieldValidator>
                                        <br />
                                        <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Department :" Font-Bold="True"
-                                            Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                            Font-Size="15pt" ForeColor="#1b9703"></asp:Label> 
                                         <asp:DropDownList runat="server" ID="departmenttxt" CssClass="form-control"  Width="300px" DataSourceID="DepartmentSource" DataTextField="DepartmentName" DataValueField="DepartmentName" ValidationGroup="doc">
                                                    <asp:ListItem>Link  Departments here </asp:ListItem>
                                                    <asp:ListItem></asp:ListItem>

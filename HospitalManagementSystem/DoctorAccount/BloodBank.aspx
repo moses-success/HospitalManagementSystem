@@ -111,19 +111,19 @@
                                                 
                                                 <br />
                                                 <asp:Label ID="label1" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
-                                                  Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                  Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                 <asp:DropDownList runat="server" CssClass="form-control" Width="600px" ID="Patienttxt"  DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name" ValidationGroup="bloodbank">    
                                                 </asp:DropDownList>
                                                 <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                  <br />
                                                 <asp:Label ID="label2" runat="server" class="labeldept" Text=" Age :" Font-Bold="True"
-                                                  Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                  Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                 <asp:TextBox runat="server" ID="agetxt" CssClass="form-control" Width="300px" TextMode="Number" placeholder="Age" ValidationGroup="bloodbank"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="requiredfield" runat="server" ErrorMessage="Age Required" ControlToValidate="agetxt" ForeColor="Red" ValidationGroup="bloodbank"></asp:RequiredFieldValidator>
 
                                                 <br />
                                                  <asp:Label ID="labeldept" runat="server" class="labeldept" Text="Gender:" Font-Bold="True"
-                                                  Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                  Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                 <asp:DropDownList runat="server" CssClass="form-control" ID="gendertxt" Width="300px" ValidationGroup="bloodbank">
                                                     <asp:ListItem>Female</asp:ListItem>
                                                     <asp:ListItem>Male</asp:ListItem>
@@ -131,7 +131,7 @@
 
                                                 <br />
 
-                                                 <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                 <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                   <asp:DropDownList runat="server" ID="bloodtxt" CssClass="form-control"  Width="300px" ValidationGroup="bloodbank">
                                                    <asp:ListItem>A</asp:ListItem>
                                                    <asp:ListItem>B</asp:ListItem>
@@ -142,7 +142,7 @@
 
                                                <br />
                                                 <asp:Label ID="label3" runat="server" class="labeldept" Text=" Donated Date :" Font-Bold="True"
-                                                  Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                  Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                 <asp:TextBox runat="server" ID="datetxt1" placeholder="Donated Date" CssClass="form-control" Height="30px" TextMode="Date" Width="600px" ValidationGroup="bloodbank"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Age Required" ControlToValidate="datetxt1" ForeColor="Red" ValidationGroup="bloodbank"></asp:RequiredFieldValidator>
 

@@ -211,10 +211,10 @@
                                         Width="522px" CaptionAlign="Top" CssClass="calender">
                                         <DayHeaderStyle Font-Bold="True" Font-Size="10pt" ForeColor="#1491d7" Height="8pt" />
                                         <DayStyle BackColor="White" />
-                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1ac6ff" />
-                                        <OtherMonthDayStyle ForeColor="#1ac6ff" />
-                                        <SelectedDayStyle BackColor="#1ac6ff" ForeColor="White" />
-                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1ac6ff" Height="12pt" />
+                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703" />
+                                        <OtherMonthDayStyle ForeColor="#1b9703" />
+                                        <SelectedDayStyle BackColor="#1b9703" ForeColor="White" />
+                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1b9703" Height="12pt" />
                                         <TodayDayStyle BackColor="#1491d7" ForeColor="blue" />
                                     </asp:Calendar>
 
@@ -229,9 +229,25 @@
                                     <i class="table"></i>&nbsp;&nbsp;  Notice Board
                                 </div>
                                 <div class="panel-body">
-                                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover"></asp:GridView>
+                                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="F" />
+                                            <asp:BoundField DataField="Notice" HeaderText="Notice" SortExpression="Notice" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
 
-                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Date], [Notice] FROM [tbl_NoticeBoard]"></asp:SqlDataSource>
                                 </div>
 
                             </div>

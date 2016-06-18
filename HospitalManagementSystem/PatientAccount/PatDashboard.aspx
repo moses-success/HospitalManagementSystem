@@ -38,9 +38,7 @@
                     <li>
                         <a href="AdmitHistroy.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Admint History</span></a>
                     </li>
-                    <li>
-                        <a href="OperationHistory.aspx"><i class="fa fa-hospital-o"></i><span class="Link">Histroy</span></a>
-                    </li>
+                   
                   
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-lock "></i><span class="Link">Profile&nbsp;</span></a>
@@ -113,20 +111,15 @@
                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"></div>
 
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                        <div class="div-square">
-                            <a href="ViewBloodBank.aspx">
-                                <i class="fa fa-tint fa-3x"></i>
-                                <h4>BloodBank</h4>
-                            </a>
-                        </div>
+                        
 
 
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="div-square">
-                            <a href="PaymentHistroy.aspx">
-                                <i class="fa fa-credit-card fa-3x"></i>
-                                <h4>View Invoice</h4>
+                            <a href="Profile.aspx">
+                                <i class="fa fa-user fa-3x"></i>
+                                <h4>Profile</h4>
                             </a>
                         </div>
 
@@ -153,10 +146,10 @@
                                         Width="530px" CaptionAlign="Top" Class="calender" Style="margin-left: 0px">
                                         <DayHeaderStyle Font-Bold="True" Font-Size="10pt" ForeColor="#1491d7" Height="8pt" />
                                         <DayStyle BackColor="White" />
-                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1ac6ff" />
-                                        <OtherMonthDayStyle ForeColor="#1ac6ff" />
-                                        <SelectedDayStyle BackColor="#1ac6ff" ForeColor="White" />
-                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1ac6ff" Height="12pt" />
+                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703;" />
+                                        <OtherMonthDayStyle ForeColor="#1b9703;" />
+                                        <SelectedDayStyle BackColor="#1b9703;" ForeColor="White" />
+                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1b9703;" Height="12pt" />
                                         <TodayDayStyle BackColor="#1491d7" ForeColor="blue" />
                                     </asp:Calendar>
 

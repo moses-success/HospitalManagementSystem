@@ -163,13 +163,13 @@
 
 
                                                     <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
-                                                        Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                        Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
                                                     <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name" ValidationGroup="appoint">
                                                     </asp:DropDownList>
 
                                                     <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                     <br />
-                                                    <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
 
                                                     <asp:TextBox runat="server" ID="datetxt" CssClass="form-control" TextMode="Date" Width="600px" Height="30px" ValidationGroup="appoint"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="regfield" runat="server" ForeColor="Red" ControlToValidate="datetxt" ErrorMessage="Date Required" ValidationGroup="appoint"></asp:RequiredFieldValidator>

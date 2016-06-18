@@ -177,7 +177,7 @@
                                                 <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Name" Width="600px">
                                                 </asp:TextBox>
                                                
-                                                <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="" ValidationGroup="pat"></asp:RegularExpressionValidator>
+                                                <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]*$" ValidationGroup="pat"></asp:RegularExpressionValidator>
                                                 <asp:RequiredFieldValidator ID="namevalidator" runat="server" ErrorMessage="Name Required" ForeColor="Red" ControlToValidate="nametxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
                                                 <br />
                                                 <asp:TextBox runat="server" ID="emailtxt" CssClass="form-control" placeholder="Email Address" Width="600px" TextMode="Email"></asp:TextBox>
@@ -196,14 +196,14 @@
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Phone Number Required" ForeColor="Red" ControlToValidate="phonetxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
 
                                                 <br />
-                                                <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Sex :" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Sex :" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" ID="sextxt" CssClass="form-control" Width="300px" ValidationGroup="pat">
                                                     <asp:ListItem>Male</asp:ListItem>
                                                     <asp:ListItem>Female</asp:ListItem>
                                                 </asp:DropDownList>
 
                                                 <br />
-                                                <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
 
                                                 <asp:TextBox runat="server" ID="dobtxt" CssClass="form-control" placeholder="Brith Date" Width="600px" Height="30px" TextMode="Date"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Date Of Brith Required" ForeColor="Red" ControlToValidate="dobtxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
@@ -214,7 +214,7 @@
 
                                                 <br />
 
-                                                <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" ID="bloodtxt" CssClass="form-control" Width="300px">
                                                     <asp:ListItem>A</asp:ListItem>
                                                     <asp:ListItem>B</asp:ListItem>

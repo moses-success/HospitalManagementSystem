@@ -71,7 +71,7 @@
                                 </div>
 
                                 <div class="tab-content">
-                                    <div class="tab-pane fade" id="Doctor">
+                                    <div class="tab-pane fade active in" id="Doctor">
 
                                         <div class="table-responsive">
                                            
@@ -155,7 +155,7 @@
                                     </div>
 
 
-                                    <div class="tab-pane fade active in" id="Add-Doctor">
+                                    <div class="tab-pane fade " id="Add-Doctor">
                                         <br />
 
                                         <div class="panel panel-primary">
@@ -164,10 +164,10 @@
                                                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger" ForeColor="Red" />
                                                 <br />
 
-                                                <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Full Name" Width="600px"></asp:TextBox>
+                                                <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder=" Name" Width="600px"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ID="validataname" ControlToValidate="nametxt" ErrorMessage="Name Required" ForeColor="Red" ValidationGroup="doc"></asp:RequiredFieldValidator>
                                                 &nbsp;
-                                                <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z_\s]*$" ValidationGroup="doc"></asp:RegularExpressionValidator>
+                                                <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]*$" ValidationGroup="doc"></asp:RegularExpressionValidator>
                                                 <br />
                                                 <asp:TextBox runat="server" ID="emailtxt" CssClass="form-control" placeholder="Email Address" Width="600px" TextMode="Email"></asp:TextBox>
                                                 <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator1" ControlToValidate="emailtxt" ErrorMessage="Email Address Required" ForeColor="Red" ValidationGroup="doc"></asp:RequiredFieldValidator>
@@ -182,7 +182,7 @@
                                                 <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator4" ControlToValidate="phonetxt" ErrorMessage="Phone Number Required" ForeColor="Red" ValidationGroup="doc"></asp:RequiredFieldValidator>
                                                 <br />
                                                 <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Department :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" ID="departmenttxt" CssClass="form-control" Width="300px" DataSourceID="DepartmentSource" DataTextField="DepartmentName" DataValueField="DepartmentName" ValidationGroup="doc">
                                                     <asp:ListItem>Link  Departments here </asp:ListItem>
                                                     <asp:ListItem></asp:ListItem>

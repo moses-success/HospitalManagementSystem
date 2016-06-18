@@ -53,7 +53,7 @@ namespace HospitalManagementSystem.AdminAccount
 
                 command.ExecuteNonQuery();
 
-                CloseConnection();
+               
                 successid.Text = "Notice Added Successfull";
                 successid.CssClass = "alert alert-success";
 
@@ -63,6 +63,10 @@ namespace HospitalManagementSystem.AdminAccount
                 ex.ToString();
                 successid.Text = "Error Adding Notice";
                 successid.CssClass = "alert alert-danger";
+            }
+            finally
+            {
+                CloseConnection();
             }
         }
         protected void Page_Load(object sender, EventArgs e)

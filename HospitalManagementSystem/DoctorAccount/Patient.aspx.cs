@@ -19,7 +19,6 @@ namespace HospitalManagementSystem.DoctorAccount
         public SqlDataReader reader;
 
 
-        int numbr = 0;
 
         public SqlCommand Commander(string CommanderCommand)
         {
@@ -41,33 +40,6 @@ namespace HospitalManagementSystem.DoctorAccount
             command.Parameters.Clear();
         }
 
-        public void checkfunction()
-        {
-            string Query = "select * from [dbo].[tbl_Patient] where @Email=Email";
-            command.Connection = connection;
-            command.CommandText = Query;
-            command.Parameters.AddWithValue("@Email", emailtxt.Text);
-            connection.Open();
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                if (reader.HasRows == true)
-                {
-                    Label1.Text = (" Email Address = " + emailtxt.Text + " Already exist");
-                    emailtxt.Text = null;
-                    Label1.CssClass = "alert alert-danger";
-                    CloseConnection();
-                    break;
-                }
-                else
-                {
-                    Insertfunction();
-
-                }
-            }
-
-
-        }
 
         public void Insertfunction()
         {
@@ -85,17 +57,19 @@ namespace HospitalManagementSystem.DoctorAccount
                 command.Parameters.AddWithValue("BloodGroup", bloodtxt.SelectedValue.ToString());
                 command.Parameters.AddWithValue("@Age", agetxt.Text);
 
-                command.ExecuteNonQuery();
-                CloseConnection();
-
-
-                numbr = numbr + 1;
-
-
-
-                successid.Text = "Registration Successfull";
-                successid.CssClass = "alert alert-success";
-
+                int ReturnNumber = (int)command.ExecuteScalar();
+                if(ReturnNumber==1)
+                {
+                    successid.Text = "Registration Successfull";
+                    successid.CssClass = "alert alert-success";
+                }
+                else
+                {
+                    successid.Text = "Error Adding Patient";
+                    successid.CssClass = "alert alert-danger";
+                }
+             
+             
             }
             catch (Exception ex)
             {
@@ -103,6 +77,10 @@ namespace HospitalManagementSystem.DoctorAccount
                 successid.Text = "Error Adding Patient";
                 successid.CssClass = "alert alert-danger";
 
+            }
+            finally
+            {
+                CloseConnection();
             }
 
         }
@@ -113,12 +91,12 @@ namespace HospitalManagementSystem.DoctorAccount
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            numberpat.Text = numbr.ToString();
+      
         }
 
         protected void addPatient_Click(object sender, EventArgs e)
         {
-            checkfunction();
+           
             Insertfunction();
         }
 

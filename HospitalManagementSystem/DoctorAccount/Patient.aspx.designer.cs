@@ -13,49 +13,13 @@ namespace HospitalManagementSystem.DoctorAccount {
     public partial class Patient {
         
         /// <summary>
-        /// numberdoc control.
+        /// successid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numberdoc;
-        
-        /// <summary>
-        /// numberpat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numberpat;
-        
-        /// <summary>
-        /// numbernurse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numbernurse;
-        
-        /// <summary>
-        /// searchtxt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchtxt;
-        
-        /// <summary>
-        /// searchbutt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchbutt;
+        protected global::System.Web.UI.WebControls.Label successid;
         
         /// <summary>
         /// Label1 control.
@@ -85,15 +49,6 @@ namespace HospitalManagementSystem.DoctorAccount {
         protected global::System.Web.UI.WebControls.SqlDataSource PatientSqlDataSource;
         
         /// <summary>
-        /// successid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label successid;
-        
-        /// <summary>
         /// summaryid control.
         /// </summary>
         /// <remarks>
@@ -110,15 +65,6 @@ namespace HospitalManagementSystem.DoctorAccount {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox nametxt;
-        
-        /// <summary>
-        /// RegularExpressionValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// RegularExpre control.

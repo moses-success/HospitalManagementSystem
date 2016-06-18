@@ -18,7 +18,7 @@
 
                     <li class="active-link">
                         <hr />
-                    <a href="DocDashBorad.aspx">
+                        <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
@@ -166,10 +166,10 @@
                                         Width="530px" CaptionAlign="Top" Class="calender" style="margin-left: 0px">
                                         <DayHeaderStyle Font-Bold="True" Font-Size="10pt" ForeColor="#1491d7" Height="8pt" />
                                         <DayStyle BackColor="White" />
-                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1ac6ff" />
-                                        <OtherMonthDayStyle ForeColor="#1ac6ff" />
-                                        <SelectedDayStyle BackColor="#1ac6ff" ForeColor="White" />
-                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1ac6ff" Height="12pt" />
+                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703" />
+                                        <OtherMonthDayStyle ForeColor="#1b9703" />
+                                        <SelectedDayStyle BackColor="#1b9703" ForeColor="White" />
+                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1b9703" Height="12pt" />
                                         <TodayDayStyle BackColor="#1491d7" ForeColor="blue" />
                                     </asp:Calendar>
 

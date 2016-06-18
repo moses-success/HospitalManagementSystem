@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Patient.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Patient" %>
+﻿<%@ Page Title="Manage Patient " Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Patient.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Patient" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -15,11 +15,11 @@
 
                 </a>
 
-                <ul class="nav" id="main-menu">
+                  <ul class="nav" id="main-menu">
 
-                    <li>
+                    <li >
                         <hr />
-                        <a href="DocDashBorad.aspx">
+                        <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
@@ -30,7 +30,7 @@
                         <a href="Appointment.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Appointment</span></a>
                     </li>
                     <li>
-                        <a href="Pescription.aspx"><i class="fa fa-medkit"></i><span class="Link">Pescription</span></a>
+                        <a href="Prescription.aspx"><i class="fa fa-medkit"></i><span class="Link">Prescription</span></a>
                     </li>
                     <li>
                         <a href="Bedallotment.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Bed Allotment</span></a>
@@ -59,26 +59,7 @@
 
                         <div class="page-head-line">
                             Manage Patient 
-                        <ul class="doctor">
-                            <li>Doctor</li>
-                            <li>
-                                <asp:Label ID="numberdoc" runat="server" ForeColor="Blue"></asp:Label></li>
-
-                        </ul>
-                            <ul class="patient">
-                                <li>Patient</li>
-                                <li>
-                                    <asp:Label ID="numberpat" runat="server" ForeColor="#FF6600"></asp:Label>
-                                </li>
-
-
-                            </ul>
-                            <ul class="nurse">
-                                <li>Nurse</li>
-                                <li>
-                                    <asp:Label ID="numbernurse" runat="server" ForeColor="#0066FF"></asp:Label>
-                                </li>
-                            </ul>
+                      
 
                         </div>
 
@@ -102,26 +83,10 @@
                                         <div class="table-responsive">
                                             <br />
 
-                                            <table class="table table-striped table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 700px">
-                                                            <div class="col-md-6">
-
-                                                                <asp:TextBox runat="server" ID="searchtxt" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <asp:Button runat="server" ID="searchbutt" CssClass="btn btn-primary" Text="search" />
-                                                            </div>
-                                                        </th>
-
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-
-                                            </table>
+                             
 
                                             <div class="col-lg-12 col-md-12">
+                                                <asp:Label ID="successid" runat="server"></asp:Label>
                                                 <asp:Label ID="Label1" runat="server"></asp:Label>
 
                                                 <asp:GridView ID="PatientGridView" runat="server" ToolTip="click on header to sort" CssClass="table table-bordered table-hover" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID"
@@ -204,19 +169,19 @@
                                     </div>
 
 
-                                    <div class="tab-pane fade" id="Add-patient">
+                                    <div class="tab-pane fade  " id="Add-patient">
                                         <br />
                                         <div class="panel panel-primary">
                                             <div class="panel-body">
-                                                <asp:Label ID="successid" runat="server"></asp:Label>
+                                                
 
                                                 <asp:ValidationSummary ID="summaryid" runat="server" ForeColor="red" CssClass="alert alert-danger" />
                                                 <br />
 
                                                 <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Name" Width="600px">
                                                 </asp:TextBox>
-                                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z_\s]*$" ValidationGroup="pat"></asp:RegularExpressionValidator>
-                                                <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="" ValidationGroup="pat"></asp:RegularExpressionValidator>
+                                                
+                                               <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]*$" ValidationGroup="pat"></asp:RegularExpressionValidator>
                                                 <asp:RequiredFieldValidator ID="namevalidator" runat="server" ErrorMessage="Name Required" ForeColor="Red" ControlToValidate="nametxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
                                                 <br />
                                                 <asp:TextBox runat="server" ID="emailtxt" CssClass="form-control" placeholder="Email Address" Width="600px" TextMode="Email"></asp:TextBox>
@@ -235,14 +200,14 @@
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Phone Number Required" ForeColor="Red" ControlToValidate="phonetxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
 
                                                 <br />
-                                                <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Sex :" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Sex :" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" ID="sextxt" CssClass="form-control" Width="300px" ValidationGroup="pat">
                                                     <asp:ListItem>Male</asp:ListItem>
                                                     <asp:ListItem>Female</asp:ListItem>
                                                 </asp:DropDownList>
 
                                                 <br />
-                                                <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
 
                                                 <asp:TextBox runat="server" ID="dobtxt" CssClass="form-control" placeholder="Brith Date" Width="600px" Height="30px" TextMode="Date"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Date Of Brith Required" ForeColor="Red" ControlToValidate="dobtxt" ValidationGroup="pat"></asp:RequiredFieldValidator>
@@ -253,7 +218,7 @@
 
                                                 <br />
 
-                                                <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                <asp:Label ID="bllabel1" runat="server" class="labeldept" Text="Blood Group:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" ID="bloodtxt" CssClass="form-control" Width="300px">
                                                     <asp:ListItem>A</asp:ListItem>
                                                     <asp:ListItem>B</asp:ListItem>
@@ -267,14 +232,12 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                    </div>
-
-
-
-
+                                        </div>
+                                    
                                 </div>
+
                             </div>
+                               
                         </div>
                     </div>
                     <!------ /* ==============================================

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageReport.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.ManageReport" %>
+﻿<%@ Page Title="Manage Report" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ManageReport.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.ManageReport" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
       <div id="wrapper">
@@ -11,23 +11,22 @@
 
                 </a>
 
-                <ul class="nav" id="main-menu">
+                 <ul class="nav" id="main-menu">
 
-                    <li>
+                    <li class="active-link">
                         <hr />
-                        <a href="DocDashBorad.aspx">
+                    <a href="DocDashBorad.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
-
                     <li>
-                        <a href="patient.aspx"><i class="fa fa-user "></i><span class="Link">Patient</span></a>
+                        <a href="Patient.aspx"><i class="fa fa-user "></i><span class="Link">Patient</span></a>
                     </li>
                     <li>
                         <a href="Appointment.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Appointment</span></a>
                     </li>
                     <li>
-                  <a href="Prescription.aspx"><i class="fa fa-medkit"></i><span class="Link">Prescription</span></a>
+                        <a href="Prescription.aspx"><i class="fa fa-medkit"></i><span class="Link">Prescription</span></a>
                     </li>
                     <li>
                         <a href="Bedallotment.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Bed Allotment</span></a>
@@ -36,7 +35,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li class="active-link">
+                    <li>
                         <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
                     </li>
 
@@ -126,7 +125,7 @@
 
 
                                                 <asp:Label ID="label1" runat="server" class="labeldept" Text="Report Type:" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
                                                 <asp:DropDownList runat="server" CssClass="form-control" ToolTip="Patient Name" ID="DropDownList" Width="300px">
                                                     <asp:ListItem>Opertional Report</asp:ListItem>
                                                     <asp:ListItem>Birth Report</asp:ListItem>
@@ -139,12 +138,12 @@
 
                                                 <br />
                                                   <asp:Label ID="label2" runat="server" class="labeldept" Text="Date :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
                                                 <asp:TextBox runat="server" ID="datetxt" CssClass="form-control" Width="600px" Height="30px" TextMode="date"></asp:TextBox>
 
                                              <br />
                                                 <asp:Label ID="label3" runat="server" class="labeldept" Text="Doctor Name :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
                                                 <asp:DropDownList runat="server" CssClass="form-control" ID="DropDownList1" Width="300px" DataSourceID="SqlDataSourceDoc" DataTextField="Name" DataValueField="Name">
                                                     <asp:ListItem></asp:ListItem>
                                                 </asp:DropDownList>
@@ -152,7 +151,7 @@
                                                 <br />
 
                                                 <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
-                                                  Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                                  Font-Size="15pt" ForeColor="#1b9703;"></asp:Label> 
                                                 <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name"> 
                                                      
                                                 </asp:DropDownList>

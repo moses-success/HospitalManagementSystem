@@ -71,6 +71,8 @@
                                         <li class=""><a href="#Add-Pescription" data-toggle="tab"><i class="fa fa-plus"></i>Add Pescription</a>
                                         </li>
 
+                                        
+
                                     </ul>
                                 </div>
 
@@ -78,26 +80,87 @@
                                     <div class="tab-pane fade active in" id="Pescription">
 
                                         <div class="table-responsive">
-                                            <table class="table table-striped table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th style="width: 700px">
-                                                            <div class="col-md-6">
-                                                                <asp:TextBox runat="server" ID="searchtxt" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="search" />
-                                                            </div>
-                                                        </th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                            </table>
-
-                                            <div class="col-lg-12 col-md-12">
+                                                <br />
+                                                <br />
+                                            <div class="col-lg-12 col-md-12" style="left: 0px; top: -1px">
+                                                <br />
                                                 <asp:Label ID="successid" runat="server"></asp:Label>
+                                                <br />
+                                                
+                                                <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                                                    <AlternatingRowStyle BackColor="White" />
+                                                    <Columns>
+                                                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                                                        <asp:BoundField DataField="DoctorName" HeaderText="DoctorName" SortExpression="DoctorName" />
+                                                        <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
+                                                        <asp:BoundField DataField="CaseHistory" HeaderText="CaseHistory" SortExpression="CaseHistory" />
+                                                        <asp:BoundField DataField="Medication" HeaderText="Medication" SortExpression="Medication" />
+                                                        <asp:BoundField DataField="PharmMedication" HeaderText="PharmMedication" SortExpression="PharmMedication" />
+                                                        <asp:BoundField DataField="Discription" HeaderText="Discription" SortExpression="Discription" />
+                                                        <asp:BoundField DataField="DatePes" HeaderText="DatePes" SortExpression="DatePes" />
+                                                        <asp:TemplateField HeaderText="Action" ShowHeader="False">
+                                                            <EditItemTemplate>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update" CssClass="btn btn-primary"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-danger" Text="Cancel"></asp:LinkButton>
+                                                            </EditItemTemplate>
+                                                            <ItemTemplate>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                    </Columns>
+                                                    <EditRowStyle BackColor="#2461BF" />
+                                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                    <RowStyle BackColor="#EFF3FB" />
+                                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                                </asp:GridView>
+
+                                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:AllConnection %>" DeleteCommand="DELETE FROM [tbl_Prescription] WHERE [Id] = @original_Id AND [DoctorName] = @original_DoctorName AND [PatientName] = @original_PatientName AND [CaseHistory] = @original_CaseHistory AND [Medication] = @original_Medication AND [PharmMedication] = @original_PharmMedication AND [Discription] = @original_Discription AND [DatePes] = @original_DatePes" InsertCommand="INSERT INTO [tbl_Prescription] ([DoctorName], [PatientName], [CaseHistory], [Medication], [PharmMedication], [Discription], [DatePes]) VALUES (@DoctorName, @PatientName, @CaseHistory, @Medication, @PharmMedication, @Discription, @DatePes)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tbl_Prescription]" UpdateCommand="UPDATE [tbl_Prescription] SET [DoctorName] = @DoctorName, [PatientName] = @PatientName, [CaseHistory] = @CaseHistory, [Medication] = @Medication, [PharmMedication] = @PharmMedication, [Discription] = @Discription, [DatePes] = @DatePes WHERE [Id] = @original_Id AND [DoctorName] = @original_DoctorName AND [PatientName] = @original_PatientName AND [CaseHistory] = @original_CaseHistory AND [Medication] = @original_Medication AND [PharmMedication] = @original_PharmMedication AND [Discription] = @original_Discription AND [DatePes] = @original_DatePes">
+                                                    <DeleteParameters>
+                                                        <asp:Parameter Name="original_Id" Type="Int32" />
+                                                        <asp:Parameter Name="original_DoctorName" Type="String" />
+                                                        <asp:Parameter Name="original_PatientName" Type="String" />
+                                                        <asp:Parameter Name="original_CaseHistory" Type="String" />
+                                                        <asp:Parameter Name="original_Medication" Type="String" />
+                                                        <asp:Parameter Name="original_PharmMedication" Type="String" />
+                                                        <asp:Parameter Name="original_Discription" Type="String" />
+                                                        <asp:Parameter DbType="Date" Name="original_DatePes" />
+                                                    </DeleteParameters>
+                                                    <InsertParameters>
+                                                        <asp:Parameter Name="DoctorName" Type="String" />
+                                                        <asp:Parameter Name="PatientName" Type="String" />
+                                                        <asp:Parameter Name="CaseHistory" Type="String" />
+                                                        <asp:Parameter Name="Medication" Type="String" />
+                                                        <asp:Parameter Name="PharmMedication" Type="String" />
+                                                        <asp:Parameter Name="Discription" Type="String" />
+                                                        <asp:Parameter DbType="Date" Name="DatePes" />
+                                                    </InsertParameters>
+                                                    <UpdateParameters>
+                                                        <asp:Parameter Name="DoctorName" Type="String" />
+                                                        <asp:Parameter Name="PatientName" Type="String" />
+                                                        <asp:Parameter Name="CaseHistory" Type="String" />
+                                                        <asp:Parameter Name="Medication" Type="String" />
+                                                        <asp:Parameter Name="PharmMedication" Type="String" />
+                                                        <asp:Parameter Name="Discription" Type="String" />
+                                                        <asp:Parameter DbType="Date" Name="DatePes" />
+                                                        <asp:Parameter Name="original_Id" Type="Int32" />
+                                                        <asp:Parameter Name="original_DoctorName" Type="String" />
+                                                        <asp:Parameter Name="original_PatientName" Type="String" />
+                                                        <asp:Parameter Name="original_CaseHistory" Type="String" />
+                                                        <asp:Parameter Name="original_Medication" Type="String" />
+                                                        <asp:Parameter Name="original_PharmMedication" Type="String" />
+                                                        <asp:Parameter Name="original_Discription" Type="String" />
+                                                        <asp:Parameter DbType="Date" Name="original_DatePes" />
+                                                    </UpdateParameters>
+                                                </asp:SqlDataSource>
                                             </div>
-                                            Database table here Database table here Database table here Database table here Database table here
+                                     
                                         </div>
 
                                     </div>
@@ -113,19 +176,19 @@
                                                 <br />
 
                                                 <asp:Label ID="labeldept" runat="server" class="labeldept" Text="Name of Doctor :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
-                                                <asp:DropDownList runat="server" CssClass="form-control" ID="doctxt" Width="300px" DataSourceID="SqlDataSourceDoctor" DataTextField="Name" DataValueField="Name">
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
+                                                <asp:DropDownList runat="server" CssClass="form-control" ID="doctxt" Width="300px" DataSourceID="SqlDataSourceDoctor" DataTextField="FirstName" DataValueField="FirstName">
 
                                                     <asp:ListItem></asp:ListItem>
                                                 </asp:DropDownList>
 
-                                                <asp:SqlDataSource ID="SqlDataSourceDoctor" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Doctor]"></asp:SqlDataSource>
+                                                <asp:SqlDataSource ID="SqlDataSourceDoctor" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [FirstName] FROM [tbl_Doctor]"></asp:SqlDataSource>
 
                                                 <br />
 
 
                                                 <asp:Label ID="label1" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name">
                                                     <asp:ListItem></asp:ListItem>
                                                 </asp:DropDownList>
@@ -151,7 +214,7 @@
 
                                                 <br />
                                                 <asp:Label ID="label2" runat="server" class="labeldept" Text="Date:" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:TextBox runat="server" ID="datetxt" CssClass="form-control" TextMode="Date" Height="30px" Width="600px"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValid" runat="server" ErrorMessage="Date Required" ForeColor="Red" ControlToValidate="datetxt" ValidationGroup="prescription"></asp:RequiredFieldValidator>
 

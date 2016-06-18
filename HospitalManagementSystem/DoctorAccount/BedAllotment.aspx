@@ -80,21 +80,7 @@
 
                                         <div class="table-responsive">
                                             <div class="table-responsive">
-                                                <table class="table table-striped table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th style="width: 700px">
-                                                                <div class="col-md-6">
-                                                                    <asp:TextBox runat="server" ID="searchtxt" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                                </div>
-                                                                <div class="col-md-6">
-                                                                    <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="search" />
-                                                                </div>
-                                                            </th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                </table>
+                                               
 
                                                  <div class="col-lg-12 col-md-12">
                                          <asp:Label ID="successid" runat="server" Width="500px"></asp:Label>
@@ -115,14 +101,14 @@
 
                                                 <br />
                                                 <asp:Label ID="labeldept" runat="server" class="labelpat" Text="Patient Name:" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" CssClass="form-control" ToolTip="Patient Name" ID="patientnametxt" Width="300px" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
                                                     <asp:ListItem></asp:ListItem>
                                                 </asp:DropDownList>
                                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                 <br />
                                                 <asp:Label ID="labelbed" runat="server" class="labelpat" Text="Bed Number:" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:DropDownList runat="server" CssClass="form-control" ID="Bedtxt" Width="300px">
                                                     <asp:ListItem>1-ward</asp:ListItem>
                                                     <asp:ListItem>2-ward</asp:ListItem>
@@ -130,12 +116,12 @@
                                                 </asp:DropDownList>
                                                 <br />
                                                 <asp:Label ID="labelallot" runat="server" class="labeldept" Text=" Allomtment Date :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:TextBox runat="server" ID="alldatetxt" CssClass="form-control" TextMode="Date" Width="600px" Height="30px" ValidationGroup="allotment"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="requiredField" runat="server" ForeColor="Red" ControlToValidate="alldatetxt" ErrorMessage="Allomtment Date Required" ValidationGroup="allotment"></asp:RequiredFieldValidator>
                                                 <br />
                                                 <asp:Label ID="labeldis" runat="server" class="labeldept" Text=" Discharge Date :" Font-Bold="True"
-                                                    Font-Size="15pt" ForeColor="#0099CC"></asp:Label>
+                                                    Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                 <asp:TextBox runat="server" ID="desdatetxt" CssClass="form-control" TextMode="Date" Width="600px" Height="30px" ValidationGroup="allotment"></asp:TextBox>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ControlToValidate="desdatetxt" ErrorMessage="Allomtment Date Required" ValidationGroup="allotment"></asp:RequiredFieldValidator>
 

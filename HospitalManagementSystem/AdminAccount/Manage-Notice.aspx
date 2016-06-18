@@ -70,23 +70,8 @@
                                 <div class="tab-pane fade active in " id="notice">
                                     
                                     <div class="table-responsive">
-                                <table class="table table-striped table-hover">
-                                    <thead>
-                                        <tr>         
-                                             <th style="width: 700px" >
-                                                <div class="col-md-6"><asp:TextBox runat="server" ID="TextBox1" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                    </div>
-                                                 <div class="col-md-6">
-                                                <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="search" /></div>
-                                           </th>
-                                            
-                                            <th>
-                                               
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                   
-                                </table>
+                               <br />
+                                         <br />
                                        <div class="col-lg-12 col-md-12">
                                            <asp:Label ID="Label1" runat="server"></asp:Label>
                                                  <asp:Label ID="successid" runat="server" ></asp:Label>
@@ -97,7 +82,7 @@
                                                  
                                                    <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                                                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-                                                   <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date"  DataFormatString="{0:d}"/>
+                                                   <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date"  DataFormatString="F"/>
                                                    <asp:BoundField DataField="Notice" HeaderText="Notice" SortExpression="Notice" />
                                                      <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                          <EditItemTemplate>
@@ -168,7 +153,7 @@
                                        <asp:RequiredFieldValidator ID="titlevalidator" runat="server" ForeColor="Red" ErrorMessage="Title Required" ControlToValidate="titletxt" ValidationGroup="note"></asp:RequiredFieldValidator>
                                        <br />
 
-                                       <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Date :" Font-Bold="True" Font-Size="15pt" ForeColor="#0099CC"></asp:Label> 
+                                       <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Date :" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label> 
                                        
                                         <asp:TextBox runat="server" ID="datetxt" CssClass="form-control" placeholder="Date" Width="600px" Height="35px" TextMode="Date"></asp:TextBox>
                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ErrorMessage="Date Required" ControlToValidate="datetxt" ValidationGroup="note"></asp:RequiredFieldValidator>

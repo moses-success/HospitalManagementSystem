@@ -41,7 +41,7 @@ body {
 	font-weight: 900;
 	padding-bottom:10px;
 	text-transform: uppercase;
-	color:#0099cc;
+	color:#1b9703;
 	font-size: 20px;
 	margin-bottom: 30px;
 	
@@ -95,18 +95,19 @@ body {
 
 .top-menu .dropdown-menu{
 	color:#fff;
-	background-color:#0099cc;
+	background-color:#1b9703;
 }
 
 	.top-menu .dropdown-menu > li > a:hover,
 	.top-menu .dropdown-menu > li > a:hover {
-		background-color: #1ac6ff !important;
+		background-color: #1b9703;!important;
 		outline: 0;
 	}
 
 
 .sidebar-collapse .nav {
-	background-color:orangered;;
+	background-color:#225c02;
+
 	margin-top:-5px;
 	border-bottom:1px solid #efefef;
    
@@ -125,7 +126,7 @@ body {
 .sidebar-collapse .nav > li > a:focus {
 	
 	 width: 250px;
-	background-color:#1b9703 !important;
+	background-color:#1b9703; !important;
 	outline:0;
 
 }
@@ -137,7 +138,7 @@ body {
 .navbar-inverse {
 	margin-right:5px;
  margin-left: 5px;
-background-color:#1ac6ff;
+background-color:#1b9703;
 border-color: #F0F0F0;
 
 }
@@ -185,7 +186,7 @@ border-color: #F0F0F0;
 	}
  
 .active-link {
-	background-color:#1ac6ff;
+	background-color:#1b9703;
 	 width: 250px;
 	
 }
@@ -198,7 +199,7 @@ border-color: #F0F0F0;
 	-webkit-border-radius:3px;
    -moz-border-radius:3px;
 	border-radius:4px;
-	background-color:#0099cc;
+	background-color:#1b9703;
    padding-bottom:3px;
    padding-right:2px;
    height:120px;
@@ -220,7 +221,7 @@ border-color: #F0F0F0;
 
 
 .dropdown-menu > li > a:hover{
-	background-color:#1ac6ff !important;
+	background-color:#1b9703;!important;
 }
 
 /*==============================================
@@ -228,25 +229,25 @@ border-color: #F0F0F0;
 	=============================================*/
 
 	.table-header{
-		color:#0099cc;
+		color:#1b9703;
 		font-size:25px;
 		 text-transform: uppercase;
 	}
    .navtab .fa {
-		color:#1ac6ff;
+		color:#1b9703;
 	}
    .navtab a {
 	   color:#fff;
    }
    .navtab{
-	   background-color:#0099cc;
+	   background-color:#1b9703;
 	   font-size:20px;
 	   text-transform: uppercase;
 	   text-emphasis-color:#fff;
    }
    .showtxt{
 	   float:right;
-	   color:#0099cc;
+	   color:#1b9703;
 
    }
  
@@ -272,7 +273,7 @@ border-color: #F0F0F0;
 	FOOTER STYLES     
 	=============================================*/
 .footer {
-	background-color:#0099cc;
+	background-color:#1b9703;
 	width:100%;
 	color:#fff;
 	padding:20px 50px 20px 50px;
@@ -321,7 +322,7 @@ border-color: #F0F0F0;
 		z-index: 1;
 		position: absolute;
 		width: 250px;
-		background-color: #0099cc;
+		background-color:#114611;
 		min-height:1090px;
 		margin-top:10px;
 		

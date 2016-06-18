@@ -56,7 +56,7 @@ namespace HospitalManagementSystem.AdminAccount
 
                 int RetrunCode = (int)command.ExecuteScalar();
 
-                if (RetrunCode == -1)
+                if (RetrunCode == 1)
                 {
                     Label1.Text = (" Email Address " + emailtxt.Text + " Already exist");
                     emailtxt.Text = null;

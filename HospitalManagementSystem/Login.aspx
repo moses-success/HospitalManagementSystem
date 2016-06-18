@@ -39,16 +39,6 @@
                         <div class="panel panel-primary">
                             <div class="panel-heading" style="color: #ffffff"><strong>LOGIN</strong></div>
                             <div class="panel-body">
-
-                                <strong>
-                                    <asp:Label ID="Label1" runat="server" Width="500"></asp:Label>
-                                </strong>
-                                <asp:DropDownList ID="profile" runat="server" CssClass="form-control" Width="500px">
-                                    <asp:ListItem Text="Select Profile....." Value="-1"></asp:ListItem>
-                                    <asp:ListItem Text="Admin" Value="1"> </asp:ListItem>
-                                    <asp:ListItem Text="" Value="2"></asp:ListItem>
-                                    <asp:ListItem Text="" Value="3"></asp:ListItem>
-                                </asp:DropDownList>
                                 <br />
                                 <asp:TextBox runat="server" ID="emailtxt" CssClass="form-control" placeholder="Email Address" Width="500px" TextMode="Email"></asp:TextBox>
                                 <br />

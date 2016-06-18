@@ -168,6 +168,8 @@
     <Content Include="assets\css\font-awesome.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\img\background.jpg" />
+    <Content Include="assets\img\icon.png" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\custom.js" />
@@ -199,14 +201,13 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regulard41d.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PatientAccount\AdmitHistroy.aspx" />
-    <Content Include="PatientAccount\OperationHistory.aspx" />
     <Content Include="PatientAccount\PatDashboard.aspx" />
     <Content Include="PatientAccount\Prescription.aspx" />
     <Content Include="PatientAccount\Profile.aspx" />
     <Content Include="PatientAccount\ViewAppointment.aspx" />
-    <Content Include="PatientAccount\ViewBloodBank.aspx" />
     <Content Include="PatientAccount\ViewDoctor.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -396,6 +397,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -410,13 +418,6 @@
     </Compile>
     <Compile Include="PatientAccount\AdmitHistroy.aspx.designer.cs">
       <DependentUpon>AdmitHistroy.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PatientAccount\OperationHistory.aspx.cs">
-      <DependentUpon>OperationHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PatientAccount\OperationHistory.aspx.designer.cs">
-      <DependentUpon>OperationHistory.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientAccount\PatDashboard.aspx.cs">
       <DependentUpon>PatDashboard.aspx</DependentUpon>
@@ -445,13 +446,6 @@
     </Compile>
     <Compile Include="PatientAccount\ViewAppointment.aspx.designer.cs">
       <DependentUpon>ViewAppointment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PatientAccount\ViewBloodBank.aspx.cs">
-      <DependentUpon>ViewBloodBank.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PatientAccount\ViewBloodBank.aspx.designer.cs">
-      <DependentUpon>ViewBloodBank.aspx</DependentUpon>
     </Compile>
     <Compile Include="PatientAccount\ViewDoctor.aspx.cs">
       <DependentUpon>ViewDoctor.aspx</DependentUpon>
