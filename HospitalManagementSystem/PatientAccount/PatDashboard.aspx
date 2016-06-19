@@ -134,6 +134,10 @@
                 <br />
                 <div class="container">
                     <div class="row">
+                         <div class=" col-md-3">
+
+                            
+                        </div>
                         <div class="col-md-6 col-xs-12">
 
                             <div class="panel panel-primary">
@@ -146,10 +150,10 @@
                                         Width="530px" CaptionAlign="Top" Class="calender" Style="margin-left: 0px">
                                         <DayHeaderStyle Font-Bold="True" Font-Size="10pt" ForeColor="#1491d7" Height="8pt" />
                                         <DayStyle BackColor="White" />
-                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703;" />
-                                        <OtherMonthDayStyle ForeColor="#1b9703;" />
-                                        <SelectedDayStyle BackColor="#1b9703;" ForeColor="White" />
-                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1b9703;" Height="12pt" />
+                                        <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703" />
+                                        <OtherMonthDayStyle ForeColor="#1b9703" />
+                                        <SelectedDayStyle BackColor="#1b9703" ForeColor="White" />
+                                        <TitleStyle BackColor="White" BorderStyle="None" Font-Bold="True" Font-Size="12pt" ForeColor="#1b9703" Height="12pt" />
                                         <TodayDayStyle BackColor="#1491d7" ForeColor="blue" />
                                     </asp:Calendar>
 
@@ -157,16 +161,9 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                        <div class=" col-md-3">
 
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <i class="table"></i>&nbsp;&nbsp;  Notice Board
-                                </div>
-                                <div class="panel-body">
-                                </div>
-
-                            </div>
+                            
                         </div>
                     </div>
 

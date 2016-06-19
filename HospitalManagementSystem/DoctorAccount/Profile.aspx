@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Profile" %>
+﻿<%@ Page Title="Manage Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
      <div id="wrapper">
@@ -36,10 +36,6 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
-
                     <li class="active-link">
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>
                     </li>
@@ -58,7 +54,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="page-head-line">Manage Profile
-                        <span class="doctor">Doctor</span><span class="patient">Patient</span><span class="nurse">Nurse</span>
+                       
                         </h4>
 
                         <div class="panel panel-default">
@@ -76,6 +72,7 @@
 
                                 <asp:Label ID="Label1" runat="server"></asp:Label>
                                 <br />
+                              
                                 <br />
                               
                                       
@@ -109,11 +106,7 @@
                                            SelectCommand="SELECT [DepartmentName] FROM [tbl_Department]">
                                        </asp:SqlDataSource>
                                        
-                                       <br />
-                                        <asp:TextBox runat="server" ID="profiletxt" CssClass="form-control" placeholder="Profile" Width="600px"></asp:TextBox>
-                                       <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator8" ControlToValidate="profiletxt" ErrorMessage="Profile Required" ForeColor="Red" ValidationGroup="doc">
-
-                                       </asp:RequiredFieldValidator>
+                                       
                                        <br />
                                 <div class="panel-footer">
                                     <asp:Button runat="server" ID="addProfile" CssClass="btn btn-primary" Text="Update Profile" Width="250px" ValidationGroup="manageprofile" OnClick="addProfile_Click" />
@@ -138,15 +131,13 @@
                                 </div>
                                 <div class="panel-adj">
                                     <br />
+                                     <asp:Label ID="Label2" runat="server"></asp:Label>
                                     <br />
                                    <asp:TextBox runat="server" ID="email1txt" CssClass="form-control" placeholder="Email Address" Width="600px" TextMode="Email"></asp:TextBox>
                                        <asp:RequiredFieldValidator runat="server" ID="RequiredFieldValidator9" ControlToValidate="email1txt" ErrorMessage="Email Address Required" ForeColor="Red" ValidationGroup="changepassword" Font-Bold="True" ></asp:RequiredFieldValidator>
                                        <br />
 
-                                    <asp:TextBox runat="server" ID="passoldtxt" CssClass="form-control" placeholder="Password" Width="600px" TextMode="Password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="Red" ErrorMessage="Password Required" ControlToValidate="passoldtxt" ValidationGroup="changepassword" Font-Bold="True"></asp:RequiredFieldValidator>
-
-                                    <br />
+                                   
                                     <asp:TextBox runat="server" ID="passnewtxt" CssClass="form-control" placeholder="New Password" Width="600px" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ForeColor="Red" ErrorMessage="New Password Required" ControlToValidate="passnewtxt" ValidationGroup="changepassword" Font-Bold="True"></asp:RequiredFieldValidator>
 

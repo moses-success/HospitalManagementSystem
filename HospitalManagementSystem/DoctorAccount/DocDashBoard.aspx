@@ -38,9 +38,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
+                    
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>

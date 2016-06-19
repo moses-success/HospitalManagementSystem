@@ -16,16 +16,16 @@
 
                    <ul class="nav" id="main-menu">
 
-                    <li class="active-link">
+                    <li >
                         <hr />
-                    <a href="DocDashBorad.aspx">
+                    <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
                     <li>
                         <a href="Patient.aspx"><i class="fa fa-user "></i><span class="Link">Patient</span></a>
                     </li>
-                    <li>
+                    <li class="active-link">
                         <a href="Appointment.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Appointment</span></a>
                     </li>
                     <li>
@@ -38,9 +38,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
+                   
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>
@@ -75,10 +73,10 @@
 
                                             <div class="table-responsive">
                                                 <br />
-                                           <br />
+                                                <br />
+                                          
 
                                             <div class="col-lg-12 col-md-12">
-
 
                                                 <asp:Label ID="Label1" runat="server" Width="500px"></asp:Label>
 
@@ -89,7 +87,7 @@
                                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                                                         <asp:BoundField DataField="DoctorName" HeaderText="DoctorName" SortExpression="DoctorName" />
                                                         <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
-                                                        <asp:BoundField DataField="BirthDate" HeaderText="BirthDate" SortExpression="BirthDate" />
+                                                        <asp:BoundField DataField="BirthDate" HeaderText="DateofAppointment" SortExpression="BirthDate" DataFormatString="{0:D}" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                             <EditItemTemplate>
                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update"></asp:LinkButton>
@@ -97,7 +95,7 @@
                                                             </EditItemTemplate>
                                                             <ItemTemplate>
                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="btn btn-primary"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="return confirm('Are You Sure To Delete');" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>
@@ -157,19 +155,19 @@
                                                     <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Doctor's Name" Width="600px" ToolTip="Doctor's Name" ValidationGroup="appoint"></asp:TextBox>
                                                     <asp:RequiredFieldValidator runat="server" ID="valdatenametxt" ControlToValidate="nametxt" ErrorMessage="Name  Required" ForeColor="Red" ValidationGroup="appoint"></asp:RequiredFieldValidator>
                                                     &nbsp;
-                                               <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationGroup="appoint" ValidationExpression="^[a-zA-Z][a-zA-Z\\s]+$"></asp:RegularExpressionValidator>
+                                               <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationGroup="appoint" ValidationExpression="^[a-zA-Z\s]*$"></asp:RegularExpressionValidator>
 
                                                     <br />
 
 
                                                     <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
-                                                        Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
+                                                        Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
                                                     <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name" ValidationGroup="appoint">
                                                     </asp:DropDownList>
 
                                                     <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                     <br />
-                                                    <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Brith Date:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703;"></asp:Label>
+                                                    <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Date for Appointment:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
 
                                                     <asp:TextBox runat="server" ID="datetxt" CssClass="form-control" TextMode="Date" Width="600px" Height="30px" ValidationGroup="appoint"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="regfield" runat="server" ForeColor="Red" ControlToValidate="datetxt" ErrorMessage="Date Required" ValidationGroup="appoint"></asp:RequiredFieldValidator>

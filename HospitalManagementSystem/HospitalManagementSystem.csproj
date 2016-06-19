@@ -53,6 +53,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AdminAccount\Admin.aspx" />
+    <Content Include="AdminAccount\AdminLogin.aspx" />
     <Content Include="AdminAccount\Department.aspx" />
     <Content Include="AdminAccount\Doctor.aspx" />
     <Content Include="AdminAccount\Manage-Notice.aspx" />
@@ -166,9 +168,12 @@
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\custom.css" />
     <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\home.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\img\background.jpg" />
+    <Content Include="assets\img\banner4.jpg" />
+    <Content Include="assets\img\homebg.jpg" />
     <Content Include="assets\img\icon.png" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\js\bootstrap.min.js" />
@@ -183,7 +188,7 @@
     <Content Include="DoctorAccount\BedAllotment.aspx" />
     <Content Include="DoctorAccount\BloodBank.aspx" />
     <Content Include="DoctorAccount\DocDashBoard.aspx" />
-    <Content Include="DoctorAccount\ManageReport.aspx" />
+    <Content Include="DoctorAccount\DoctorLogin.aspx" />
     <Content Include="DoctorAccount\Patient.aspx" />
     <Content Include="DoctorAccount\Prescription.aspx" />
     <Content Include="DoctorAccount\Profile.aspx" />
@@ -238,8 +243,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -263,6 +266,13 @@
     </Compile>
     <Compile Include="AdminAccount\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAccount\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAccount\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminAccount\Department.aspx.cs">
       <DependentUpon>Department.aspx</DependentUpon>
@@ -331,13 +341,6 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DoctorAccount\Appointment.aspx.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,12 +369,12 @@
     <Compile Include="DoctorAccount\DocDashBoard.aspx.designer.cs">
       <DependentUpon>DocDashBoard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DoctorAccount\ManageReport.aspx.cs">
-      <DependentUpon>ManageReport.aspx</DependentUpon>
+    <Compile Include="DoctorAccount\DoctorLogin.aspx.cs">
+      <DependentUpon>DoctorLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DoctorAccount\ManageReport.aspx.designer.cs">
-      <DependentUpon>ManageReport.aspx</DependentUpon>
+    <Compile Include="DoctorAccount\DoctorLogin.aspx.designer.cs">
+      <DependentUpon>DoctorLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="DoctorAccount\Patient.aspx.cs">
       <DependentUpon>Patient.aspx</DependentUpon>

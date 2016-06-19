@@ -71,7 +71,7 @@
                                </div>
                            <asp:Label ID="successid" runat="server"></asp:Label>
                            
-                                       <asp:Label ID="Label1" runat="server"></asp:Label>
+                                      
                                        <br />
                            <br />
                                       <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Name" Width="600px"></asp:TextBox>
@@ -116,16 +116,12 @@
                             </ul>
                                </div>
                                        <div class="panel-adj">
+                                            <asp:Label ID="Label1" runat="server"></asp:Label>
                                            <br />
 
 
                                             <asp:TextBox runat="server" ID="emailtxtp" CssClass="form-control" placeholder="Email" Width="600px" TextMode="Email" ViewStateMode="Disabled"></asp:TextBox>
-                                       <asp:RequiredFieldValidator ID="RequiredFieldVal1" runat="server" ForeColor="Red" ErrorMessage="Email Required" ControlToValidate="emailtxtp" ValidationGroup="manageprofile"></asp:RequiredFieldValidator>
-
-                                       <br />
-                                       
-                                       <asp:TextBox runat="server" ID="passtxt" CssClass="form-control" placeholder="Password" Width="600px" TextMode="Password"></asp:TextBox>
-                                       <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="Red" ErrorMessage="Password Required" ControlToValidate="passtxt" ValidationGroup="changepassword"></asp:RequiredFieldValidator>
+                                       <asp:RequiredFieldValidator ID="RequiredFieldVal1" runat="server" ForeColor="Red" ErrorMessage="Email Required" ControlToValidate="emailtxtp" ValidationGroup="changepassword"></asp:RequiredFieldValidator>
 
                                        <br />
                                         <asp:TextBox runat="server" ID="newpasstxt" CssClass="form-control" placeholder="New Password" Width="600px" TextMode="Password"></asp:TextBox>

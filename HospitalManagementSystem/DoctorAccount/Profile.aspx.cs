@@ -53,7 +53,6 @@ namespace HospitalManagementSystem.DoctorAccount
                 command.Parameters.AddWithValue("@Location", locationtxt.Text);
                 command.Parameters.AddWithValue("@PhoneNumber", phonetxt.Text);
                 command.Parameters.AddWithValue("@Department", departmenttxt.Text);
-                command.Parameters.AddWithValue("@Profile", profiletxt.Text);
 
 
 

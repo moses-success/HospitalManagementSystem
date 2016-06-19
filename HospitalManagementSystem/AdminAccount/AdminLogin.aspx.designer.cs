@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HospitalManagementSystem.PatientAccount {
+namespace HospitalManagementSystem.AdminAccount {
     
     
-    public partial class AdmitHistroy {
+    public partial class AdminLogin {
+        
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// Label1 control.
@@ -22,39 +31,30 @@ namespace HospitalManagementSystem.PatientAccount {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lbl_patientName control.
+        /// emailtxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_patientName;
+        protected global::System.Web.UI.WebControls.TextBox emailtxt;
         
         /// <summary>
-        /// lbl_bednumber control.
+        /// passtxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_bednumber;
+        protected global::System.Web.UI.WebControls.TextBox passtxt;
         
         /// <summary>
-        /// lbl_allotment control.
+        /// logIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_allotment;
-        
-        /// <summary>
-        /// lbl_discharge control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_discharge;
+        protected global::System.Web.UI.WebControls.Button logIn;
     }
 }

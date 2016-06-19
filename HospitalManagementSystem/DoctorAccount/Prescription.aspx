@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Prescription.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Prescription" %>
+﻿<%@ Page Title="Prescription" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Prescription.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.Prescription" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -18,7 +18,7 @@
 
                     <li>
                         <hr />
-                        <a href="DocDashBorad.aspx">
+                        <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
@@ -38,9 +38,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
+                 
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>
@@ -81,23 +79,23 @@
 
                                         <div class="table-responsive">
                                                 <br />
-                                                <br />
+                                               
                                             <div class="col-lg-12 col-md-12" style="left: 0px; top: -1px">
                                                 <br />
                                                 <asp:Label ID="successid" runat="server"></asp:Label>
-                                                <br />
+                                                
                                                 
                                                 <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                                                     <AlternatingRowStyle BackColor="White" />
                                                     <Columns>
                                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                                                        <asp:BoundField DataField="DoctorName" HeaderText="DoctorName" SortExpression="DoctorName" />
-                                                        <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
-                                                        <asp:BoundField DataField="CaseHistory" HeaderText="CaseHistory" SortExpression="CaseHistory" />
+                                                        <asp:BoundField DataField="DoctorName" HeaderText="Doctor Name" SortExpression="DoctorName" />
+                                                        <asp:BoundField DataField="PatientName" HeaderText="Patient Name" SortExpression="PatientName" />
+                                                        <asp:BoundField DataField="CaseHistory" HeaderText="Case History" SortExpression="CaseHistory" />
                                                         <asp:BoundField DataField="Medication" HeaderText="Medication" SortExpression="Medication" />
-                                                        <asp:BoundField DataField="PharmMedication" HeaderText="PharmMedication" SortExpression="PharmMedication" />
+                                                        <asp:BoundField DataField="PharmMedication" HeaderText="Pharm Medication" SortExpression="PharmMedication" />
                                                         <asp:BoundField DataField="Discription" HeaderText="Discription" SortExpression="Discription" />
-                                                        <asp:BoundField DataField="DatePes" HeaderText="DatePes" SortExpression="DatePes" />
+                                                        <asp:BoundField DataField="DatePes" HeaderText="Date of Pescription" SortExpression="DatePes" DataFormatString="{0:D}"/>
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                             <EditItemTemplate>
                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" Text="Update" CssClass="btn btn-primary"></asp:LinkButton>
@@ -105,7 +103,7 @@
                                                             </EditItemTemplate>
                                                             <ItemTemplate>
                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are You Sure To Delete');" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>
@@ -166,7 +164,7 @@
                                     </div>
 
 
-                                    <div class="tab-pane fade active in" id="Add-Pescription">
+                                    <div class="tab-pane fade" id="Add-Pescription">
                                         <br />
 
                                         <div class="panel panel-primary">

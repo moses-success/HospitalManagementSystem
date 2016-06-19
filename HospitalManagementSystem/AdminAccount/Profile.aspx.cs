@@ -59,11 +59,11 @@ namespace HospitalManagementSystem.AdminAccount
                 if (RetrunCode == 1)
                 {
                     successid.Text = "Update Successfull";
-                    Label1.CssClass = "alert alert-danger";
+                    successid.CssClass = "alert alert-success";
                 }
                 else
                 {
-                    successid.Text = "Registration Successfull";
+                    successid.Text = "Inserted Successfull";
                     successid.CssClass = "alert alert-success";
 
                 }
@@ -87,7 +87,7 @@ namespace HospitalManagementSystem.AdminAccount
             {
                 Commander("[dbo].[spChangeAdmin]");
                 command.Parameters.AddWithValue("@Email", emailtxt.Text);
-                command.Parameters.AddWithValue("@Password", passtxt.Text);
+                command.Parameters.AddWithValue("@Password", newpasstxt.Text);
                 command.ExecuteNonQuery();
 
 
@@ -95,20 +95,20 @@ namespace HospitalManagementSystem.AdminAccount
 
                 if (RetrunCode == 1)
                 {
-                    successid.Text = "Update Successfull";
-                    Label1.CssClass = "alert alert-danger";
+                   Label1.Text = "Update Successfull";
+                    Label1.CssClass = "alert alert-success";
                 }
                 else
                 {
-                    successid.Text = "Update Failed";
-                    successid.CssClass = "alert alert-danger";
+                    Label1.Text = "Update Failed";
+                     Label1.CssClass = "alert alert-danger";
 
                 }
             }
             catch (Exception ex)
             {
-                successid.Text = ex.ToString() + "Error Upadate";
-                successid.CssClass = "alert alert-danger";
+                Label1.Text = ex.ToString() + "Error Upadate";
+                Label1.CssClass = "alert alert-danger";
             }
             finally
             {

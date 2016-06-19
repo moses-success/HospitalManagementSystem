@@ -53,20 +53,8 @@ body {
 	padding-bottom:10px;
 }
 
-.page-head-line label{
-	color:orangered;
-   
-}
-.page-head-line .doctor{
-	float:right;
-	margin-left: 10px;
-	text-align:center;
-	 
-}
 
-.page-head-line .doctor .numberd{
-	color:orangered;
-}
+
 
 .page-head-line .nurse{
 	 float:right;
@@ -75,11 +63,7 @@ body {
  
 
 }
-.page-head-line .patient{
-	float:right;
-	 margin-left: 10px;
-	 text-align:center;
-}
+
 .pad-top {
 	padding-top:15px;
 }
@@ -135,13 +119,7 @@ body {
 	border:none;
 	padding-top: 10px;
 }
-.navbar-inverse {
-	margin-right:5px;
- margin-left: 5px;
-background-color:#1b9703;
-border-color: #F0F0F0;
 
-}
 
 
 .nav > li > a > i {
@@ -191,6 +169,14 @@ border-color: #F0F0F0;
 	
 }
 
+.navbar-inverse {
+	margin-right:500px;
+ margin-left: 5px;
+background-color:#1b9703;
+border-color: #F0F0F0;
+
+}
+
 /*==============================================
 	DASHBOARD STYLES    
 	=============================================*/
@@ -205,14 +191,20 @@ border-color: #F0F0F0;
    height:120px;
 }
 
+
+
+	
+
 	.div-square > a, .div-square > a .div-square > a, .div-square > a:focus {
 		color:#fff;
 		text-decoration: none;
 		
 	}
 .image {
-	
-	padding-bottom:300px;
+    background-image: url('../img/banner4.jpg');
+    max-height: 799px;
+    background-size: cover;
+    padding-bottom: 300px;
 }
 
 .dropdown-menu{
@@ -254,6 +246,7 @@ border-color: #F0F0F0;
  .alert alert-danger{
 	 width:500px;
 	 height:20px;
+     
  }
   .alert alert-success{
 	 width:500px;
@@ -283,10 +276,6 @@ border-color: #F0F0F0;
 }
 
 
-	.footer > a, .footer>a:hover {
-	   
-		color:#fff;
-	}
 
 	.calender{
 		margin-left:50px;
@@ -328,5 +317,3 @@ border-color: #F0F0F0;
 		
 	}
 }
-
-

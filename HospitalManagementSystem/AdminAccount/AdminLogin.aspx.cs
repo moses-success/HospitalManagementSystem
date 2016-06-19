@@ -8,12 +8,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HospitalManagementSystem
+namespace HospitalManagementSystem.AdminAccount
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class AdminLogin : System.Web.UI.Page
     {
-
-
 
         public SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["AllConnection"].ConnectionString);
         public SqlCommand command = new SqlCommand();
@@ -46,17 +44,17 @@ namespace HospitalManagementSystem
         {
             try
             {
-                command = Commander("[dbo].[spLoginPatient]");
+                command = Commander("[dbo].[spLoginAdmin]");
 
-              
+
                 command.Parameters.AddWithValue("@Email", emailtxt.Text);
                 command.Parameters.AddWithValue("@Password", passtxt.Text);
-                
+
 
                 int ReturnNumber = (int)command.ExecuteScalar();
                 if (ReturnNumber == 1)
                 {
-                    Response.Redirect("~/PatientAccount/PatDashboard.aspx");
+                    Response.Redirect("~/AdminAccount/Admin.aspx");
                 }
                 else
                 {
@@ -69,7 +67,7 @@ namespace HospitalManagementSystem
             catch (Exception ex)
             {
                 ex.ToString();
-                 Label1.Text = "Error ";
+                Label1.Text = "Error ";
                 Label1.CssClass = "alert alert-danger";
 
             }
@@ -79,7 +77,6 @@ namespace HospitalManagementSystem
             }
 
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -89,7 +86,5 @@ namespace HospitalManagementSystem
         {
             Loginfunction();
         }
-
-     
     }
 }

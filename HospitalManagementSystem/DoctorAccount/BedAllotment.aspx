@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BedAllotment.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.BedAllotment" %>
+﻿<%@ Page Title="Manage Bed Allotment" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BedAllotment.aspx.cs" Inherits="HospitalManagementSystem.DoctorAccount.BedAllotment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
@@ -16,7 +16,7 @@
 
                     <li>
                         <hr />
-                        <a href="Doctor.aspx">
+                        <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 
@@ -37,9 +37,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
+                    
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>
@@ -59,7 +57,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="page-head-line">Manage Bed Allotment
-                        <span class="doctor">Doctor</span><span class="patient">Patient</span><span class="nurse">Nurse</span>
+                      
                         </h4>
 
                         <div class="panel panel-default">
@@ -77,15 +75,76 @@
 
                                 <div class="tab-content">
                                     <div class="tab-pane fade active in" id="bedallotment">
-
+                                        
                                         <div class="table-responsive">
+                                            <br />
+                                           
                                             <div class="table-responsive">
                                                
 
                                                  <div class="col-lg-12 col-md-12">
                                          <asp:Label ID="successid" runat="server" Width="500px"></asp:Label>
+                                                     <br />
+                                                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None">
+                                                         <AlternatingRowStyle BackColor="White" />
+                                                         <Columns>
+                                                             <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                                                             <asp:BoundField DataField="PatientName" HeaderText="Patient Name" SortExpression="PatientName" />
+                                                             <asp:BoundField DataField="BedNumber" HeaderText="Bed Number" SortExpression="BedNumber" />
+                                                             <asp:BoundField DataField="Allotment" HeaderText="Allotment" SortExpression="Allotment" DataFormatString="{0:D}"/>
+                                                             <asp:BoundField DataField="Discharge" HeaderText="Discharge" SortExpression="Discharge" DataFormatString="{0:D}"/>
+                                                             <asp:TemplateField HeaderText="Action" ShowHeader="False">
+                                                                 <EditItemTemplate>
+                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CssClass="btn btn-primary" CommandName="Update" Text="Update"></asp:LinkButton>
+                                                                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False"  CssClass="btn btn-danger" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                                                                 </EditItemTemplate>
+                                                                 <ItemTemplate>
+                                                                     <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CssClass="btn btn-primary" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                                                                     &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" OnClientClick="return confirm('Are You Sure To Delete');" CssClass="btn btn-danger" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                                                                 </ItemTemplate>
+                                                             </asp:TemplateField>
+                                                         </Columns>
+                                                         <EditRowStyle BackColor="#2461BF" />
+                                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                         <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                                         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                                         <RowStyle BackColor="#EFF3FB" />
+                                                         <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                                         <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                                         <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                                     </asp:GridView>
+
+
+                                                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:AllConnection %>" DeleteCommand="DELETE FROM [tbl_Bedallotment] WHERE [Id] = @original_Id AND [PatientName] = @original_PatientName AND [BedNumber] = @original_BedNumber AND [Allotment] = @original_Allotment AND [Discharge] = @original_Discharge" InsertCommand="INSERT INTO [tbl_Bedallotment] ([PatientName], [BedNumber], [Allotment], [Discharge]) VALUES (@PatientName, @BedNumber, @Allotment, @Discharge)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [tbl_Bedallotment]" UpdateCommand="UPDATE [tbl_Bedallotment] SET [PatientName] = @PatientName, [BedNumber] = @BedNumber, [Allotment] = @Allotment, [Discharge] = @Discharge WHERE [Id] = @original_Id AND [PatientName] = @original_PatientName AND [BedNumber] = @original_BedNumber AND [Allotment] = @original_Allotment AND [Discharge] = @original_Discharge">
+                                                         <DeleteParameters>
+                                                             <asp:Parameter Name="original_Id" Type="Int32" />
+                                                             <asp:Parameter Name="original_PatientName" Type="String" />
+                                                             <asp:Parameter Name="original_BedNumber" Type="String" />
+                                                             <asp:Parameter Name="original_Allotment" Type="String" />
+                                                             <asp:Parameter Name="original_Discharge" Type="String" />
+                                                         </DeleteParameters>
+                                                         <InsertParameters>
+                                                             <asp:Parameter Name="PatientName" Type="String" />
+                                                             <asp:Parameter Name="BedNumber" Type="String" />
+                                                             <asp:Parameter Name="Allotment" Type="String" />
+                                                             <asp:Parameter Name="Discharge" Type="String" />
+                                                         </InsertParameters>
+                                                         <UpdateParameters>
+                                                             <asp:Parameter Name="PatientName" Type="String" />
+                                                             <asp:Parameter Name="BedNumber" Type="String" />
+                                                             <asp:Parameter Name="Allotment" Type="String" />
+                                                             <asp:Parameter Name="Discharge" Type="String" />
+                                                             <asp:Parameter Name="original_Id" Type="Int32" />
+                                                             <asp:Parameter Name="original_PatientName" Type="String" />
+                                                             <asp:Parameter Name="original_BedNumber" Type="String" />
+                                                             <asp:Parameter Name="original_Allotment" Type="String" />
+                                                             <asp:Parameter Name="original_Discharge" Type="String" />
+                                                         </UpdateParameters>
+                                                     </asp:SqlDataSource>
                                             </div>
-                                                Database table here Database table here Database table here Database table here Database table here
+                                             
                                             </div>
 
                                         </div>

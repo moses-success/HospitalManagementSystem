@@ -1,20 +1,23 @@
 ﻿<%@ Page Title="View Admint History" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdmitHistroy.aspx.cs" Inherits="HospitalManagementSystem.PatientAccount.AdmitHistroy" %>
+
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-     <div id="wrapper">
+    <div id="wrapper">
 
-      <nav class="navbar navbar-side" role="navigation">
+        <nav class="navbar navbar-side" role="navigation">
             <div class="sidebar-collapse">
-               
-                           <a id="logo" href="Default.aspx">
+
+                <a id="logo" href="Default.aspx">
                     <img src="../assets/img/logo.png" />
 
                 </a>
-                     
+
                 <ul class="nav" id="main-menu">
 
-                    <li >
+                    <li>
                         <hr />
 
                         <a href="DashBoard.aspx"><i class="fa fa-dashboard"></i><span class="Link">Dashboard</span></a>
@@ -39,72 +42,86 @@
                     <li>
                         <a href="OperationHistory.aspx"><i class="fa fa-hospital-o"></i><span class="Link">Histroy</span></a>
                     </li>
-                  
+
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-lock "></i><span class="Link">Profile&nbsp;</span></a>
                     </li>
                 </ul>
-                            </div>
+            </div>
 
         </nav>
 
 
 
-         <!--End of nav-->
+        <!--End of nav-->
 
-          <div id="page-wrapper" >
+        <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                      <div class="page-head-line">  View Admint History
+                        <div class="page-head-line">
+                            View Admint History
                         
                         
-                    </div>
-                         
-      <div class="panel panel-default">
-                       <div class="panel-body">
-                          
-                            
-                           <div class="navtab">
-                              <ul class="nav nav-tabs">
-                                <li class="active"><a href="#" data-toggle="tab"><i class="fa fa-navicon"></i>Admint History</a>
-                                </li>
-                                <li>
-                                    
-                                </li>
-                               
-                            </ul>
-                               </div>
-                           <br />
-                           <table class="table table-striped table-hover">
-                                    <thead>
-                                        <tr>         
-                                             <th style="width: 700px" >
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="TextBox1" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                    </div>
-                                                 <div class="col-md-6">
-                                                <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="search" /></div>
-                                           </th>   
-                                            <th></th>      
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+
+
+                                <div class="navtab">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#" data-toggle="tab"><i class="fa fa-navicon"></i>Admint History</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <br />
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
+                                <table class="table table-bordered table-striped table-condensed ">
+
+                                    <tbody>
+                                        <tr>
+                                            <td>Patient Name </td>
+                                            <td>
+                                                <asp:Label ID="lbl_patientName" runat="server"></asp:Label>
+                                            </td>
+
                                         </tr>
-                                    </thead>
-                                   </table>
-                          
+                                        <tr>
+                                            <td>Bed Number</td>
+                                            <td>
+                                                <asp:Label ID="lbl_bednumber" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Allotment Date  </td>
+                                            <td>
+                                                <asp:Label ID="lbl_allotment" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discharge Date </td>
+                                            <td>
+                                                <asp:Label ID="lbl_discharge" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
 
 
 
+                                    </tbody>
+                                </table>
+
+
+                            </div>
 
 
 
-                           </div>
+                        </div>
 
-
-
-          </div>
-                    
-                  </div>
-              </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

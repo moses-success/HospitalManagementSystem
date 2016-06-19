@@ -67,15 +67,11 @@ namespace HospitalManagementSystem.AdminAccount
                 }
                 else
                 {
-                    successid.Text = "";
+                    successid.Text = (" Email Address " + emailtxt.Text + " Already exist");
+                    emailtxt.Text = null;
                     successid.CssClass = "alert alert-danger";
 
                 }
-
-                command.ExecuteNonQuery();
-                CloseConnection();
-               
-
             }
             catch (Exception ex)
             {
@@ -83,6 +79,9 @@ namespace HospitalManagementSystem.AdminAccount
                 successid.Text = "Error Adding Patient";
                 successid.CssClass = "alert alert-danger";
 
+            }finally
+            {
+                CloseConnection();
             }
 
         }
@@ -98,8 +97,9 @@ namespace HospitalManagementSystem.AdminAccount
 
         protected void addPatient_Click(object sender, EventArgs e)
         {
-           
-            
+            Insertfunction();
+
+
         }
 
 

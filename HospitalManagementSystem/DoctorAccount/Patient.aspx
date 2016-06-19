@@ -39,9 +39,7 @@
                         <a href="Bloodbank.aspx"><i class="fa fa-tint"></i><span class="Link">View Blood Bank</span></a>
                     </li>
 
-                    <li>
-                        <a href="managereport.aspx"><i class="fa fa-file-text-o"></i><span class="Link">Manage Report</span></a>
-                    </li>
+                   
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-wrench"></i><span class="Link">Profile</span></a>
@@ -100,7 +98,7 @@
                                                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
                                                         <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
                                                         <asp:BoundField DataField="Sex" HeaderText="Sex" SortExpression="Sex" />
-                                                        <asp:BoundField DataField="DateofBrith" HeaderText="DateofBrith" SortExpression="DateofBrith" />
+                                                        <asp:BoundField DataField="DateofBrith" HeaderText="DateofBrith" SortExpression="DateofBrith" DataFormatString="{0:D}" />
                                                         <asp:BoundField DataField="BloodGroup" HeaderText="BloodGroup" SortExpression="BloodGroup" />
                                                         <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
