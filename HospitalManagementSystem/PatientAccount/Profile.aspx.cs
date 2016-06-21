@@ -74,7 +74,7 @@ namespace HospitalManagementSystem.PatientAccount
             {
                 Commander("[dbo].[spUpadatePatient]");
 
-                command.Parameters.AddWithValue("@Name", nametxt.Text);
+                command.Parameters.AddWithValue("@PatientName", nametxt.Text);
                 command.Parameters.AddWithValue("@Email", emailtxt.Text);
                 command.Parameters.AddWithValue("@Location", locationtxt.Text);
                 command.Parameters.AddWithValue("@PhoneNumber", phonetxt.Text);

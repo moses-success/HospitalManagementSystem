@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HospitalManagementSystem {
+namespace HospitalManagementSystem.PatientAccount {
     
     
-    public partial class Login {
+    public partial class BloodBank {
         
         /// <summary>
-        /// form1 control.
+        /// lb1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lb1;
         
         /// <summary>
         /// Label1 control.
@@ -31,30 +31,48 @@ namespace HospitalManagementSystem {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// nametxt control.
+        /// lbl_patientName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nametxt;
+        protected global::System.Web.UI.WebControls.Label lbl_patientName;
         
         /// <summary>
-        /// passtxt control.
+        /// lbl_age control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passtxt;
+        protected global::System.Web.UI.WebControls.Label lbl_age;
         
         /// <summary>
-        /// logIn control.
+        /// lbl_gender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logIn;
+        protected global::System.Web.UI.WebControls.Label lbl_gender;
+        
+        /// <summary>
+        /// lbl_group control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_group;
+        
+        /// <summary>
+        /// lbl_date control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_date;
     }
 }

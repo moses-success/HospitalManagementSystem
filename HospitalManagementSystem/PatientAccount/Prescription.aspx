@@ -14,7 +14,7 @@
 
                 </a>
 
-               <ul class="nav" id="main-menu">
+                <ul class="nav" id="main-menu">
 
                     <li>
                         <hr />
@@ -26,22 +26,18 @@
                     <li>
                         <a href="ViewAppointment.aspx"><i class="fa fa-pencil-square-o "></i><span class="Link">Appointment</span></a>
                     </li>
-                    <li  class="active-link">
+                    <li class="active-link">
                         <a href="Prescription.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Prescription</span></a>
                     </li>
+                    
                     <li>
-                        <a href="ViewDoctor.aspx"><i class="fa fa-user-md "></i><span class="Link">View Doctor</span></a>
-                    </li>
-                    <li>
-                        <a href="ViewBloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
+                        <a href="BloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
                     </li>
                     <li>
                         <a href="AdmitHistroy.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Admint History</span></a>
                     </li>
-                    <li>
-                        <a href="OperationHistory.aspx"><i class="fa fa-hospital-o"></i><span class="Link">Histroy</span></a>
-                    </li>
-                  
+                    
+
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-lock "></i><span class="Link">Profile&nbsp;</span></a>
                     </li>
@@ -71,25 +67,61 @@
                                     <ul class="nav nav-tabs">
                                         <li class="active"><a href="#" data-toggle="tab" style="width: 308px"><i class="fa fa-navicon"></i>Prescription List</a>
                                         </li>
-                                        <li></li>
+                                       
 
                                     </ul>
                                 </div>
+                                 <asp:Label ID="lb1" runat="server" CssClass="label label-info" ></asp:Label>
+                                <table class="table table-responsive">
 
-                                <table class="table table-striped table-hover">
-                                    <thead>
+                                    <tbody>
                                         <tr>
-                                            <th style="width: 700px">
-                                                <div class="col-md-6">
-                                                    <asp:TextBox runat="server" ID="TextBox1" CssClass="form-control" Width="300px" placeholder="search"></asp:TextBox>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <asp:Button runat="server" ID="Button1" CssClass="btn btn-primary" Text="search" />
-                                                </div>
-                                            </th>
-                                            <th></th>
+                                            <td>Doctor Name </td>
+
+                                            <td>
+                                                <asp:Label ID="lbl_doctorname" runat="server"></asp:Label>
+                                            </td>
+
                                         </tr>
-                                    </thead>
+                                        <tr>
+                                            <td>Patient Name</td>
+                                            <td>
+                                                <asp:Label ID="lbl_patientname" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Case History  </td>
+                                            <td>
+                                                <asp:Label ID="lbl_casehistory" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medication </td>
+                                            <td>
+                                                <asp:Label ID="lbl_medication" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pharm Medication </td>
+                                            <td>
+                                                <asp:Label ID="lbl_pharm" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discription </td>
+                                            <td>
+                                                <asp:Label ID="lbl_disp" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Date Pescribe </td>
+                                            <td>
+                                                <asp:Label ID="lbl_pescrib" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
                                 </table>
                                 <!-----
                                Gridview for Prescription

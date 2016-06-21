@@ -30,18 +30,14 @@
                     <li>
                         <a href="Prescription.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Prescription</span></a>
                     </li>
+                    
                     <li>
-                        <a href="ViewDoctor.aspx"><i class="fa fa-user-md "></i><span class="Link">View Doctor</span></a>
-                    </li>
-                    <li>
-                        <a href="ViewBloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
+                        <a href="BloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
                     </li>
                     <li class="active-link">
                         <a href="AdmitHistroy.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Admint History</span></a>
                     </li>
-                    <li>
-                        <a href="OperationHistory.aspx"><i class="fa fa-hospital-o"></i><span class="Link">Histroy</span></a>
-                    </li>
+                  
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-lock "></i><span class="Link">Profile&nbsp;</span></a>
@@ -75,17 +71,30 @@
                                         </li>
                                     </ul>
                                 </div>
+
+
+
+                                <div>
+                                </div>
                                 <br />
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="lb1" runat="server" CssClass="label label-info" ></asp:Label>
+
+                                <br />
+
+                               
+                                <asp:Label ID="Label1" runat="server" CssClass="label label-info"  ></asp:Label>
 
 
-                                <table class="table table-bordered table-striped table-condensed ">
+                                <br />
+
+
+                                <table class="table table-condensed table-bordered">
 
                                     <tbody>
                                         <tr>
-                                            <td>Patient Name </td>
-                                            <td>
-                                                <asp:Label ID="lbl_patientName" runat="server"></asp:Label>
+                                            <td >Patient Name </td>
+                                            
+                                               <td> <asp:Label ID="lbl_patientName" runat="server"></asp:Label>
                                             </td>
 
                                         </tr>

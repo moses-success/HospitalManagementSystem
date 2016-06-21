@@ -14,7 +14,7 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/assets/img/icon.png" rel="shortcut icon" type="image/x-icon"/>
 
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+   
     <!-- Toastr STYLES-->
     <link href="content/toastr.css" rel="stylesheet" />
     <!-- BOOTSTRAP STYLES-->
@@ -24,7 +24,7 @@
     <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
-
+ 
 
 </head>
 <body>
@@ -58,30 +58,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-
                 </div>
                 <div id="headertxt">
                     <h2>Hospital Management System</h2>
                 </div>
-                
-                <div class="top-menu">
-                    &nbsp;&nbsp;
-                    <div style="margin: 5px;" class="btn-group">
-                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> <span class="fa fa-th-large"></span>&nbsp;Account&nbsp; <span class="fa fa-caret-down"></span></button>
-                        <ul class="dropdown-menu">
-
-                            <li><a href="#"><i class="fa fa-user">&nbsp;Profile</i></a></li>
-                            <li><a href="Default.aspx"><i class="fa fa-lock">&nbsp;Logout</i></a></li>
-                            
-
-                        </ul>
-
-                    </div>
-                </div>
-
-
-
             </div>
         </div>
 

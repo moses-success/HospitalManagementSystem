@@ -51,7 +51,7 @@
             <div id="page-wrapper">
                 <div id="page-inner">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" style="left: 0px; top: 0px">
                             <h4 class="page-head-line">Manage Appointment
                         
                             </h4>
@@ -87,15 +87,15 @@
                                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                                                         <asp:BoundField DataField="DoctorName" HeaderText="DoctorName" SortExpression="DoctorName" />
                                                         <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
-                                                        <asp:BoundField DataField="BirthDate" HeaderText="DateofAppointment" SortExpression="BirthDate" DataFormatString="{0:D}" />
+                                                        <asp:BoundField DataField="BirthDate" HeaderText="BirthDate" SortExpression="BirthDate" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                             <EditItemTemplate>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-danger" Text="Cancel"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CssClass="btn btn-primary" CommandName="Update" Text="Update"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CssClass="btn btn-danger" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
                                                             </EditItemTemplate>
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" CssClass="btn btn-primary"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="return confirm('Are You Sure To Delete');" CausesValidation="False" CommandName="Delete" CssClass="btn btn-danger" Text="Delete"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CssClass="btn btn-primary" CommandName="Edit" Text="Edit"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CssClass="btn btn-danger" CommandName="Delete" Text="Delete"></asp:LinkButton>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>

@@ -18,7 +18,7 @@ namespace HospitalManagementSystem.AdminAccount
         public SqlDataReader reader;
 
 
-        int numbr = 0;
+    
 
         public SqlCommand Commander(string CommanderCommand)
         {
@@ -48,7 +48,7 @@ namespace HospitalManagementSystem.AdminAccount
             {
                 command = Commander("[dbo].[spInsertPatient]");
 
-                command.Parameters.AddWithValue("@Name", nametxt.Text);
+                command.Parameters.AddWithValue("@PatientName", nametxt.Text);
                 command.Parameters.AddWithValue("@Email", emailtxt.Text);
                 command.Parameters.AddWithValue("@Password", passwordtxt.Text);
                 command.Parameters.AddWithValue("@Location", locationtxt.Text);

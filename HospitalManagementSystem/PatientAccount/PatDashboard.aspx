@@ -29,11 +29,9 @@
                     <li>
                         <a href="Prescription.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Prescription</span></a>
                     </li>
+                   
                     <li>
-                        <a href="ViewDoctor.aspx"><i class="fa fa-user-md "></i><span class="Link">View Doctor</span></a>
-                    </li>
-                    <li>
-                        <a href="ViewBloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
+                        <a href="BloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
                     </li>
                     <li>
                         <a href="AdmitHistroy.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Admint History</span></a>
@@ -64,16 +62,16 @@
                 <!-- /. ROW  -->
 
                 <div class="row text-center pad-top">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                    
+                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="div-square">
-                            <a href="ViewDoctor.aspx">
-                                <i class="fa fa-user-md fa-3x"></i>
-                                <h4>Doctor</h4>
+                            <a href="Profile.aspx">
+                                <i class="fa fa-user fa-3x"></i>
+                                <h4>Profile</h4>
                             </a>
                         </div>
 
                     </div>
-
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="div-square">
                             <a href="ViewAppointment.aspx">
@@ -107,25 +105,6 @@
                  
 
                 </div>
-                 <div class="row text-center pad-top">
-                   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"></div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                        
-
-
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                        <div class="div-square">
-                            <a href="Profile.aspx">
-                                <i class="fa fa-user fa-3x"></i>
-                                <h4>Profile</h4>
-                            </a>
-                        </div>
-
-                    </div>
-                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6"></div>
-                     </div>
                 <!---- /*==============================================
                         End Row One 
     =============================================*/---->

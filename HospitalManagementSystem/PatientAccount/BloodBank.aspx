@@ -1,6 +1,7 @@
-﻿<%@ Page Title="  View Appointment " Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewAppointment.aspx.cs" Inherits="HospitalManagementSystem.PatientAccount.ViewAppointment" %>
+﻿<%@ Page Title="View Blood Bank" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BloodBank.aspx.cs" Inherits="HospitalManagementSystem.PatientAccount.BloodBank" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
 
     <div id="wrapper">
 
@@ -12,7 +13,7 @@
 
                 </a>
 
-                <ul class="nav" id="main-menu">
+                 <ul class="nav" id="main-menu">
 
                     <li>
                         <hr />
@@ -21,20 +22,20 @@
                     </li>
 
 
-                    <li class="active-link">
+                    <li>
                         <a href="ViewAppointment.aspx"><i class="fa fa-pencil-square-o "></i><span class="Link">Appointment</span></a>
                     </li>
                     <li>
                         <a href="Prescription.aspx"><i class="fa fa-stethoscope "></i><span class="Link">Prescription</span></a>
                     </li>
-                   
-                    <li>
-                        <a href="ViewBloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
+                    
+                    <li class="active-link">
+                        <a href="BloodBank.aspx"><i class="fa fa-tint "></i><span class="Link">BloodBank</span></a>
                     </li>
-                    <li>
+                    <li >
                         <a href="AdmitHistroy.aspx"><i class="fa fa-hdd-o"></i><span class="Link">Admint History</span></a>
                     </li>
-                   
+                  
 
                     <li>
                         <a href="Profile.aspx"><i class="fa fa-lock "></i><span class="Link">Profile&nbsp;</span></a>
@@ -45,6 +46,7 @@
         </nav>
 
 
+
         <!--End of nav-->
 
         <div id="page-wrapper">
@@ -52,9 +54,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-head-line">
-                            View Appointment 
-                       
-
+                            View BloodBank
+                        
+                        
                         </div>
 
                         <div class="panel panel-default">
@@ -63,47 +65,62 @@
 
                                 <div class="navtab">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a href="#" data-toggle="tab" style="width: 308px"><i class="fa fa-navicon"></i>View Appointment</a>
+                                        <li class="active"><a href="#" data-toggle="tab"><i class="fa fa-navicon"></i>Admint History</a>
                                         </li>
-
-
                                     </ul>
                                 </div>
+
+
+
+                                <div>
+                                </div>
+                                <br />
                                 <asp:Label ID="lb1" runat="server" CssClass="label label-info"></asp:Label>
+
+                                <br />
+                                <asp:Label ID="Label1" runat="server" CssClass="label label-info"></asp:Label>
+
+
                                 <table class="table table-responsive">
 
                                     <tbody>
                                         <tr>
-                                            <td>Doctor Name </td>
+                                            <td>Patient Name </td>
 
                                             <td>
-                                                <asp:Label ID="lbl_doctorname" runat="server"></asp:Label>
+                                                <asp:Label ID="lbl_patientName" runat="server"></asp:Label>
                                             </td>
 
                                         </tr>
                                         <tr>
-                                            <td>Patient Name</td>
+                                            <td>Age</td>
                                             <td>
-                                                <asp:Label ID="lbl_patientname" runat="server"></asp:Label>
+                                                <asp:Label ID="lbl_age" runat="server"></asp:Label>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Appointment Date </td>
+                                            <td>Gender </td>
                                             <td>
-                                                <asp:Label ID="lbl_appointment" runat="server"></asp:Label>
+                                                <asp:Label ID="lbl_gender" runat="server"></asp:Label>
                                             </td>
                                         </tr>
-                                        
-                                       
-
+                                        <tr>
+                                            <td>BloodGroup </td>
+                                            <td>
+                                                <asp:Label ID="lbl_group" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>DonatedDate</td>
+                                            <td>
+                                                <asp:Label ID="lbl_date" runat="server"></asp:Label>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
 
                             </div>
-
-
-
                         </div>
 
                     </div>

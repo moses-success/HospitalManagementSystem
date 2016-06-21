@@ -85,28 +85,28 @@
                                                 <asp:Label ID="Label1" runat="server"></asp:Label>
                                                  <asp:Label ID="successid" runat="server"></asp:Label>
 
-                                                <asp:GridView ID="PatientGridView" runat="server" ToolTip="click on header to sort" CssClass="table table-bordered table-hover" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID"
+                                                <asp:GridView ID="PatientGridView" runat="server" ToolTip="click on header to sort" CssClass="table table-bordered table-hover" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id"
                                                     DataSourceID="PatientSqlDataSource" ForeColor="#333333" GridLines="None" OnRowUpdated="PatientGridView_RowUpdated" OnRowDeleted="PatientGridView_RowDeleted">
                                                     <AlternatingRowStyle BackColor="White" />
                                                     <Columns>
 
-                                                        <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                                                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                                                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                                                        <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
                                                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                                                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
                                                         <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
                                                         <asp:BoundField DataField="Sex" HeaderText="Sex" SortExpression="Sex" />
-                                                        <asp:BoundField DataField="DateofBrith" HeaderText="DateofBrith" SortExpression="DateofBrith" />
+                                                        <asp:BoundField DataField="DateOfBrith" HeaderText="DateOfBrith" SortExpression="DateOfBrith" DataFormatString="{0:D}" />
                                                         <asp:BoundField DataField="BloodGroup" HeaderText="BloodGroup" SortExpression="BloodGroup" />
                                                         <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                             <EditItemTemplate>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CssClass="btn btn-primary" CommandName="Update" Text="Update"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-danger" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" CssClass="btn btn-primary" Text="Update"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="btn btn-danger" Text="Cancel"></asp:LinkButton>
                                                             </EditItemTemplate>
                                                             <ItemTemplate>
-                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CssClass="btn btn-primary" CommandName="Edit" Text="Edit"></asp:LinkButton>
-                                                                &nbsp;<asp:LinkButton OnClientClick="return confirm('Are You Sure To Delete');" ID="LinkButton2" runat="server" CssClass="btn btn-danger" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
+                                                                <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" CssClass="btn btn-primary" Text="Edit"></asp:LinkButton>
+                                                                &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="return confirm('Are You Sure To Delete');" CausesValidation="False" CssClass="btn btn-danger" CommandName="Delete" Text="Delete"></asp:LinkButton>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
                                                     </Columns>
@@ -124,37 +124,48 @@
 
 
 
-                                                <asp:SqlDataSource ID="PatientSqlDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:AllConnection %>" DeleteCommand="DELETE FROM [tbl_Patient] WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Email] = @original_Email AND [Location] = @original_Location AND [PhoneNumber] = @original_PhoneNumber AND [Sex] = @original_Sex AND [DateofBrith] = @original_DateofBrith AND [BloodGroup] = @original_BloodGroup AND [Age] = @original_Age"
-                                                    SelectCommand="SELECT [ID], [Name], [Email], [Location], [PhoneNumber], [Sex], [DateofBrith], [BloodGroup], [Age] FROM [tbl_Patient]"
-                                                    UpdateCommand="UPDATE [tbl_Patient] SET [Name] = @Name, [Email] = @Email, [Location] = @Location, [PhoneNumber] = @PhoneNumber, [Sex] = @Sex, [DateofBrith] = @DateofBrith, [BloodGroup] = @BloodGroup, [Age] = @Age WHERE [ID] = @original_ID AND [Name] = @original_Name AND [Email] = @original_Email AND [Location] = @original_Location AND [PhoneNumber] = @original_PhoneNumber AND [Sex] = @original_Sex AND [DateofBrith] = @original_DateofBrith AND [BloodGroup] = @original_BloodGroup AND [Age] = @original_Age">
+                                                <asp:SqlDataSource ID="PatientSqlDataSource" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:AllConnection %>" DeleteCommand="DELETE FROM [tbl_Patient] WHERE [Id] = @original_Id AND [PatientName] = @original_PatientName AND [Email] = @original_Email AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL)) AND [PhoneNumber] = @original_PhoneNumber AND [Sex] = @original_Sex AND [DateOfBrith] = @original_DateOfBrith AND [BloodGroup] = @original_BloodGroup AND (([Age] = @original_Age) OR ([Age] IS NULL AND @original_Age IS NULL))"
+                                                    SelectCommand="SELECT [Id], [PatientName], [Email], [Location], [PhoneNumber], [Sex], [DateOfBrith], [BloodGroup], [Age] FROM [tbl_Patient]"
+                                                    UpdateCommand="UPDATE [tbl_Patient] SET [PatientName] = @PatientName, [Email] = @Email, [Location] = @Location, [PhoneNumber] = @PhoneNumber, [Sex] = @Sex, [DateOfBrith] = @DateOfBrith, [BloodGroup] = @BloodGroup, [Age] = @Age WHERE [Id] = @original_Id AND [PatientName] = @original_PatientName AND [Email] = @original_Email AND (([Location] = @original_Location) OR ([Location] IS NULL AND @original_Location IS NULL)) AND [PhoneNumber] = @original_PhoneNumber AND [Sex] = @original_Sex AND [DateOfBrith] = @original_DateOfBrith AND [BloodGroup] = @original_BloodGroup AND (([Age] = @original_Age) OR ([Age] IS NULL AND @original_Age IS NULL))" InsertCommand="INSERT INTO [tbl_Patient] ([PatientName], [Email], [Location], [PhoneNumber], [Sex], [DateOfBrith], [BloodGroup], [Age]) VALUES (@PatientName, @Email, @Location, @PhoneNumber, @Sex, @DateOfBrith, @BloodGroup, @Age)" OldValuesParameterFormatString="original_{0}">
                                                     <DeleteParameters>
-                                                        <asp:Parameter Name="original_ID" Type="Int32" />
-                                                        <asp:Parameter Name="original_Name" Type="String" />
+                                                        <asp:Parameter Name="original_Id" Type="Int32" />
+                                                        <asp:Parameter Name="original_PatientName" Type="String" />
                                                         <asp:Parameter Name="original_Email" Type="String" />
                                                         <asp:Parameter Name="original_Location" Type="String" />
-                                                        <asp:Parameter Name="original_PhoneNumber" Type="Int32" />
+                                                        <asp:Parameter Name="original_PhoneNumber" Type="String" />
                                                         <asp:Parameter Name="original_Sex" Type="String" />
-                                                        <asp:Parameter DbType="Date" Name="original_DateofBrith" />
+                                                        <asp:Parameter DbType="Date" Name="original_DateOfBrith" />
                                                         <asp:Parameter Name="original_BloodGroup" Type="String" />
                                                         <asp:Parameter Name="original_Age" Type="Int32" />
                                                     </DeleteParameters>
 
-                                                    <UpdateParameters>
-                                                        <asp:Parameter Name="Name" Type="String" />
+                                                    <InsertParameters>
+                                                        <asp:Parameter Name="PatientName" Type="String" />
                                                         <asp:Parameter Name="Email" Type="String" />
                                                         <asp:Parameter Name="Location" Type="String" />
-                                                        <asp:Parameter Name="PhoneNumber" Type="Int32" />
+                                                        <asp:Parameter Name="PhoneNumber" Type="String" />
                                                         <asp:Parameter Name="Sex" Type="String" />
-                                                        <asp:Parameter DbType="Date" Name="DateofBrith" />
+                                                        <asp:Parameter DbType="Date" Name="DateOfBrith" />
                                                         <asp:Parameter Name="BloodGroup" Type="String" />
                                                         <asp:Parameter Name="Age" Type="Int32" />
-                                                        <asp:Parameter Name="original_ID" Type="Int32" />
-                                                        <asp:Parameter Name="original_Name" Type="String" />
+                                                    </InsertParameters>
+
+                                                    <UpdateParameters>
+                                                        <asp:Parameter Name="PatientName" Type="String" />
+                                                        <asp:Parameter Name="Email" Type="String" />
+                                                        <asp:Parameter Name="Location" Type="String" />
+                                                        <asp:Parameter Name="PhoneNumber" Type="String" />
+                                                        <asp:Parameter Name="Sex" Type="String" />
+                                                        <asp:Parameter DbType="Date" Name="DateOfBrith" />
+                                                        <asp:Parameter Name="BloodGroup" Type="String" />
+                                                        <asp:Parameter Name="Age" Type="Int32" />
+                                                        <asp:Parameter Name="original_Id" Type="Int32" />
+                                                        <asp:Parameter Name="original_PatientName" Type="String" />
                                                         <asp:Parameter Name="original_Email" Type="String" />
                                                         <asp:Parameter Name="original_Location" Type="String" />
-                                                        <asp:Parameter Name="original_PhoneNumber" Type="Int32" />
+                                                        <asp:Parameter Name="original_PhoneNumber" Type="String" />
                                                         <asp:Parameter Name="original_Sex" Type="String" />
-                                                        <asp:Parameter DbType="Date" Name="original_DateofBrith" />
+                                                        <asp:Parameter DbType="Date" Name="original_DateOfBrith" />
                                                         <asp:Parameter Name="original_BloodGroup" Type="String" />
                                                         <asp:Parameter Name="original_Age" Type="Int32" />
                                                     </UpdateParameters>

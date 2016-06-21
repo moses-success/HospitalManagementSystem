@@ -57,21 +57,7 @@
                 <div class="row">
                     <div class="col-md-12">
                       <div class="page-head-line"> Manage Profile
-                        <ul class="doctor" >
-                            <li>Doctor</li>
-                             <li> <asp:Label ID="numberdoc" runat="server" ForeColor="Blue" ></asp:Label></li>
-                           
-                        </ul>
-                        <ul class="patient" >
-                            <li>Patient</li> 
-                            <li> <asp:Label ID="numberpat" runat="server"  ForeColor="#FF6600" ></asp:Label> </li>
-                            
-
-                        </ul>
-                        <ul class="nurse">
-                            <li>Nurse</li>
-                             <li><asp:Label ID="numbernurse" runat="server"  ForeColor="#0066FF"></asp:Label> </li>
-                        </ul>
+                        
                         
                     </div>
                          

@@ -208,7 +208,7 @@
                                 </div>
                                 <div class="panel-body">
                                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#efefef" BorderStyle="none" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="#fff" Height="250px" NextPrevFormat="ShortMonth"
-                                        Width="522px" CaptionAlign="Top" CssClass="calender">
+                                        Width="425px" CaptionAlign="Top" CssClass="calender">
                                         <DayHeaderStyle Font-Bold="True" Font-Size="10pt" ForeColor="#1491d7" Height="8pt" />
                                         <DayStyle BackColor="White" />
                                         <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#1b9703" />
@@ -225,14 +225,11 @@
                         <div class="col-md-6 col-xs-12">
 
                             <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <i class="table"></i>&nbsp;&nbsp;  Notice Board
-                                </div>
-                                <div class="panel-body">
-                                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                                <div>
+                                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover"  AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
-                                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="F" />
+                                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="{0:D}" />
                                             <asp:BoundField DataField="Notice" HeaderText="Notice" SortExpression="Notice" />
                                         </Columns>
                                         <EditRowStyle BackColor="#2461BF" />

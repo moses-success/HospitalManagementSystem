@@ -10,9 +10,8 @@ using System.Web.UI.WebControls;
 
 namespace HospitalManagementSystem.PatientAccount
 {
-    public partial class AdmitHistroy : System.Web.UI.Page
+    public partial class BloodBank : System.Web.UI.Page
     {
-
         public SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["AllConnection"].ConnectionString);
         public SqlCommand command = new SqlCommand();
         public SqlDataAdapter da = new SqlDataAdapter();
@@ -43,7 +42,7 @@ namespace HospitalManagementSystem.PatientAccount
 
             lb1.Text = "WELLCOME:: " + Session["[PatientName]"];
 
-            command = Commander("[dbo].[spSelectItems]");
+            command = Commander("[dbo].[spSelectBloodBank]");
             command.Parameters.AddWithValue("@patient", name);
 
 
@@ -55,11 +54,12 @@ namespace HospitalManagementSystem.PatientAccount
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-               
+
                 lbl_patientName.Text = ds.Tables[0].Rows[0]["PatientName"].ToString();
-                lbl_bednumber.Text = ds.Tables[0].Rows[0]["BedNumber"].ToString();
-                lbl_allotment.Text = ds.Tables[0].Rows[0]["Allotment"].ToString();
-                lbl_discharge.Text = ds.Tables[0].Rows[0]["Discharge"].ToString();
+                lbl_age.Text = ds.Tables[0].Rows[0]["Age"].ToString();
+                lbl_gender.Text = ds.Tables[0].Rows[0]["Gender"].ToString();
+                lbl_group.Text = ds.Tables[0].Rows[0]["BloodGroup"].ToString();
+                lbl_date.Text= ds.Tables[0].Rows[0]["DonatedDate"].ToString();
             }
         }
     }

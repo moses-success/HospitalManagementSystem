@@ -16,7 +16,7 @@
 
                  <ul class="nav" id="main-menu">
 
-                    <li class="active-link">
+                    <li >
                         <hr />
                         <a href="Admin.aspx">
                             <i class="fa fa-dashboard"></i><span class="Link">Dashboard</span></a>
@@ -26,7 +26,7 @@
                     <li>
                         <a href="Department.aspx"><i class="fa fa-sitemap "></i><span class="Link">Department</span></a>
                     </li>
-                    <li>
+                    <li class="active-link">
                         <a href="Doctor.aspx"><i class="fa fa-user-md "></i><span class="Link">Doctor</span></a>
                     </li>
                     <li>

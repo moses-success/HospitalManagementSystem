@@ -13,13 +13,14 @@
     <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body class="image">
     <form id="form1" runat="server">
         <div class="content-wrapper">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Index.aspx">Home</a></li>
                     <li class="active">User access</li>
                 </ol>
                 <div class="row">
@@ -48,10 +49,10 @@
                             <div class="panel-heading" style="color: #ffffff"><strong>LOGIN</strong></div>
                             <div class="panel-body">
                                 <h3 class="thin text-center">Sign in to your account</h3>
-                                <p class="text-center text-muted">Please vist the Hospital to  <a href="signup.html">Register</a> If you have not </p>
+                                <p class="text-center text-muted">Please vist the Hospital to Register If you have not </p>
                                 <hr />
-                                <br />
-                                <asp:TextBox runat="server" ID="emailtxt" CssClass="form-control" placeholder="Email Address" Width="500px" TextMode="Email"></asp:TextBox>
+                                
+                                <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Patient Name" Width="500px" ></asp:TextBox>
                                 <br />
                                 <asp:TextBox runat="server" ID="passtxt" CssClass="form-control" placeholder="Password" Width="500px" TextMode="Password"></asp:TextBox>
 

@@ -8,18 +8,20 @@ body {
 }
 
 
-
  #wrapper {
 	width: 100%;
 	margin-top:50px;
 	 margin-left: 5px;
 	 margin-right:5px;
 	background-color:#efefef; 
+	
 }
+
 .thumbnail{
 	width:180px;
 	height:120px;
 }
+
 #page-wrapper {
 	padding: 20px 20px;
 	min-height: 600px;
@@ -41,27 +43,26 @@ body {
 	font-weight: 900;
 	padding-bottom:10px;
 	text-transform: uppercase;
-	color:#1b9703;
+	color:#0099cc;
 	font-size: 20px;
 	margin-bottom: 30px;
 	
 }
 
 
-.page-head-line ul{
-	list-style-type:none;
-	padding-bottom:10px;
+
+.navbar-inverse {
+background-color:#666699;
+border-color: #F0F0F0;
+
 }
 
-
-
-
-.page-head-line .nurse{
-	 float:right;
-	 margin-left: 10px;
-	 text-align:center;
- 
-
+.adjust-nav > a {
+	float:right;
+	color:#fff;
+	margin-top:0px;
+	margin-right: 10px;
+	
 }
 
 .pad-top {
@@ -69,30 +70,35 @@ body {
 }
 /*==============================================
 	MENU STYLES    
-	=============================================*/
+	============================================*/
 
 .top-menu{
 	float:right;
-	margin-top:8px;
+	margin-top:20px;
+	padding-right:40px;
 
 }
 
 .top-menu .dropdown-menu{
 	color:#fff;
-	background-color:#1b9703;
+	background-color:#0099cc;
 }
 
 	.top-menu .dropdown-menu > li > a:hover,
 	.top-menu .dropdown-menu > li > a:hover {
-		background-color: #1b9703;!important;
+		background-color: #1ac6ff !important;
 		outline: 0;
 	}
 
-
+.sidebar-collapse .tologo {
+	padding-top:10px;
+	background-color:#0099cc;
+	padding-left:60px;
+	  
+}
 .sidebar-collapse .nav {
-	background-color:#225c02;
-
-	margin-top:-5px;
+	background-color:#666699;
+	margin-top:5px;
 	border-bottom:1px solid #efefef;
    
 }
@@ -110,15 +116,11 @@ body {
 .sidebar-collapse .nav > li > a:focus {
 	
 	 width: 250px;
-	background-color:#1b9703; !important;
+	background-color:#9999FF !important;
 	outline:0;
 
 }
 
-.navbar-side {
-	border:none;
-	padding-top: 10px;
-}
 
 
 
@@ -140,18 +142,13 @@ body {
 		color:#fff;
    text-transform: uppercase
 }
-.adjust-nav > a {
-	float:right;
-	color:#fff;
-	margin-top:10px;
-	margin-right: 10px;
-	
-}
+
 #headertxt{
 	float: left;
 	margin-top: -10px;
 	font-size: 20px;
 	color: #fff;
+	margin:10px;
 }
 	.logout-spn a {
 		text-decoration:none;
@@ -164,17 +161,10 @@ body {
 	}
  
 .active-link {
-	background-color:#1b9703;
+	background-color:#9999FF;
+
 	 width: 250px;
 	
-}
-
-.navbar-inverse {
-	margin-right:500px;
- margin-left: 5px;
-background-color:#1b9703;
-border-color: #F0F0F0;
-
 }
 
 /*==============================================
@@ -185,26 +175,23 @@ border-color: #F0F0F0;
 	-webkit-border-radius:3px;
    -moz-border-radius:3px;
 	border-radius:4px;
-	background-color:#1b9703;
+	background-color:#cbcaca;
    padding-bottom:3px;
-   padding-right:2px;
+   padding-right:3px;
    height:120px;
+
 }
 
-
-
-	
-
 	.div-square > a, .div-square > a .div-square > a, .div-square > a:focus {
-		color:#fff;
+		color: #0099cc;
 		text-decoration: none;
 		
 	}
 .image {
-    background-image: url('../img/banner4.jpg');
-    max-height: 799px;
-    background-size: cover;
-    padding-bottom: 300px;
+
+	background-image: url('../img/banner4.jpg');
+	background-size:cover;
+	height:799px;
 }
 
 .dropdown-menu{
@@ -213,7 +200,7 @@ border-color: #F0F0F0;
 
 
 .dropdown-menu > li > a:hover{
-	background-color:#1b9703;!important;
+	background-color:#1ac6ff !important;
 }
 
 /*==============================================
@@ -221,32 +208,31 @@ border-color: #F0F0F0;
 	=============================================*/
 
 	.table-header{
-		color:#1b9703;
+		color:#0099cc;
 		font-size:25px;
 		 text-transform: uppercase;
 	}
    .navtab .fa {
-		color:#1b9703;
+		color:#1ac6ff;
 	}
    .navtab a {
 	   color:#fff;
    }
    .navtab{
-	   background-color:#1b9703;
+	   background-color:#666699;
 	   font-size:20px;
 	   text-transform: uppercase;
 	   text-emphasis-color:#fff;
    }
    .showtxt{
 	   float:right;
-	   color:#1b9703;
+	   color:#0099cc;
 
    }
  
  .alert alert-danger{
 	 width:500px;
 	 height:20px;
-     
  }
   .alert alert-success{
 	 width:500px;
@@ -266,20 +252,23 @@ border-color: #F0F0F0;
 	FOOTER STYLES     
 	=============================================*/
 .footer {
-	background-color:#1b9703;
+	background-color:#666699;
 	width:100%;
 	color:#fff;
 	padding:20px 50px 20px 50px;
-	 padding-left:20px;
-	 margin-top: -80px
+	
+	 margin-top: -100px
 
 }
 
 
+	.footer > a, .footer>a:hover {
+	   
+		color:#fff;
+	}
 
 	.calender{
 		margin-left:50px;
-		margin:3px;
 	   
 	}
 
@@ -291,6 +280,23 @@ border-color: #F0F0F0;
 	}
 
 
+	 
+/*==============================================
+	Patient Table
+	=============================================*/
+
+
+.table-condensed tbody
+{
+	color:#0099cc;
+
+}
+
+#lb1{
+	
+font-weight:bold;
+font-size:15px;
+}
 
 
 /*==============================================
@@ -311,9 +317,11 @@ border-color: #F0F0F0;
 		z-index: 1;
 		position: absolute;
 		width: 250px;
-		background-color:#114611;
+		background-color:#666699;
 		min-height:1090px;
 		margin-top:10px;
 		
 	}
 }
+
+

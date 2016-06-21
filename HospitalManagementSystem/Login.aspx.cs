@@ -46,16 +46,18 @@ namespace HospitalManagementSystem
         {
             try
             {
-                command = Commander("[dbo].[spLoginPatient]");
+                string PatientName = nametxt.Text.Trim();
+                string Password = passtxt.Text.Trim();
 
-              
-                command.Parameters.AddWithValue("@Email", emailtxt.Text);
+                command = Commander("[dbo].[spLoginPatient]");
+                command.Parameters.AddWithValue("@PatientName", nametxt.Text);
                 command.Parameters.AddWithValue("@Password", passtxt.Text);
-                
+
 
                 int ReturnNumber = (int)command.ExecuteScalar();
                 if (ReturnNumber == 1)
                 {
+                    Session["[PatientName]"] = PatientName;
                     Response.Redirect("~/PatientAccount/PatDashboard.aspx");
                 }
                 else
@@ -64,12 +66,11 @@ namespace HospitalManagementSystem
                     Label1.CssClass = "alert alert-danger";
                 }
 
-
             }
             catch (Exception ex)
             {
                 ex.ToString();
-                 Label1.Text = "Error ";
+                Label1.Text = "Error ";
                 Label1.CssClass = "alert alert-danger";
 
             }

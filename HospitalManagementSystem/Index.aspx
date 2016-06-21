@@ -8,22 +8,22 @@
 	<meta name="description" content="">
 	<meta name="author" content="Sergey Pozhilov">
 
-	<title></title>
+	<title>Home</title>
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	   <link href="~/assets/img/icon.png" rel="shortcut icon" type="image/x-icon"/>
 
 	
 	<!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/home.css" rel="stylesheet" />
+	<link href="assets/css/home.css" rel="stylesheet" />
 	<!-- FONTAWESOME STYLES-->
 	<link href="assets/css/font-awesome.css" rel="stylesheet" />
 	<!-- CUSTOM STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
 </head>
 
 	<body class="home">
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-default navbar-fixed-top headroom" >
+	<div class="navbar navbar-invser navbar-fixed-top headroom" >
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
@@ -32,10 +32,10 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active-link"><a href="Index.aspx">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn btn-default" href="Login.aspx">SIGN IN / SIGN UP</a></li>
+					<li><a class="btn " href="Login.aspx">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -77,11 +77,10 @@ Founded in 1949 by the Sisters of St. Joseph of the Third Order of St. Francis, 
 					<div class="col-md-6 widget">
 						<div class="widget-body">
 							<p class="simplenav">
-								<a href="#">Home</a> | 
+								<a href="Index.aspx">Home</a> | 
 								<a href="about.html">About</a> |
-								<a href="sidebar-right.html">Sidebar</a> |
 								<a href="contact.html">Contact</a> |
-								<b><a href="signup.html">Sign up</a></b>
+								<b><a href="Login.aspx">Sign up</a></b>
 							</p>
 						</div>
 					</div>

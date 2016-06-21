@@ -13,33 +13,6 @@ namespace HospitalManagementSystem.PatientAccount {
     public partial class Profile {
         
         /// <summary>
-        /// numberdoc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numberdoc;
-        
-        /// <summary>
-        /// numberpat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numberpat;
-        
-        /// <summary>
-        /// numbernurse control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label numbernurse;
-        
-        /// <summary>
         /// ValidationSummary2 control.
         /// </summary>
         /// <remarks>

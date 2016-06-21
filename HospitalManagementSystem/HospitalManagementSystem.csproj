@@ -155,7 +155,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="AdminAccount\Admin.aspx" />
     <Content Include="AdminAccount\AdminLogin.aspx" />
     <Content Include="AdminAccount\Department.aspx" />
@@ -180,7 +179,6 @@
     <Content Include="assets\js\custom.js" />
     <Content Include="assets\js\jquery-1.10.2.js" />
     <Content Include="assets\js\jquery.js" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -209,11 +207,11 @@
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PatientAccount\AdmitHistroy.aspx" />
+    <Content Include="PatientAccount\BloodBank.aspx" />
     <Content Include="PatientAccount\PatDashboard.aspx" />
     <Content Include="PatientAccount\Prescription.aspx" />
     <Content Include="PatientAccount\Profile.aspx" />
     <Content Include="PatientAccount\ViewAppointment.aspx" />
-    <Content Include="PatientAccount\ViewDoctor.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -324,23 +322,9 @@
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DoctorAccount\Appointment.aspx.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -422,6 +406,13 @@
     <Compile Include="PatientAccount\AdmitHistroy.aspx.designer.cs">
       <DependentUpon>AdmitHistroy.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PatientAccount\BloodBank.aspx.cs">
+      <DependentUpon>BloodBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientAccount\BloodBank.aspx.designer.cs">
+      <DependentUpon>BloodBank.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PatientAccount\PatDashboard.aspx.cs">
       <DependentUpon>PatDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -449,13 +440,6 @@
     </Compile>
     <Compile Include="PatientAccount\ViewAppointment.aspx.designer.cs">
       <DependentUpon>ViewAppointment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PatientAccount\ViewDoctor.aspx.cs">
-      <DependentUpon>ViewDoctor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PatientAccount\ViewDoctor.aspx.designer.cs">
-      <DependentUpon>ViewDoctor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
