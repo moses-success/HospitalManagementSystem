@@ -11,7 +11,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/Logo1.jpg" alt="LOGO"/> 
+                    <img src="../assets/img/Logo1.jpg" alt="LOGOs"/> 
 
                 </a>
 
