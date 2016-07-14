@@ -156,7 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminAccount\Admin.aspx" />
-    <Content Include="AdminAccount\AdminLogin.aspx" />
+    <Content Include="AdminAccount\Login.aspx" />
     <Content Include="AdminAccount\Department.aspx" />
     <Content Include="AdminAccount\Doctor.aspx" />
     <Content Include="AdminAccount\Manage-Notice.aspx" />
@@ -174,16 +174,17 @@
     <Content Include="assets\img\banner4.jpg" />
     <Content Include="assets\img\homebg.jpg" />
     <Content Include="assets\img\icon.png" />
-    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\Logo1.jpg" />
+    <Content Include="assets\img\logtop.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\custom.js" />
     <Content Include="assets\js\jquery-1.10.2.js" />
     <Content Include="assets\js\jquery.js" />
+    <Content Include="DoctorAccount\BedAllotment.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="DoctorAccount\Appointment.aspx" />
-    <Content Include="DoctorAccount\BedAllotment.aspx" />
     <Content Include="DoctorAccount\BloodBank.aspx" />
     <Content Include="DoctorAccount\DocDashBoard.aspx" />
     <Content Include="DoctorAccount\DoctorLogin.aspx" />
@@ -194,7 +195,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="AdminAccount\Web.config" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
@@ -203,9 +203,12 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="PatientAccount\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Index.aspx" />
-    <Content Include="Login.aspx" />
+    <Content Include="Account\Login.aspx" />
     <Content Include="PatientAccount\AdmitHistroy.aspx" />
     <Content Include="PatientAccount\BloodBank.aspx" />
     <Content Include="PatientAccount\PatDashboard.aspx" />
@@ -265,12 +268,12 @@
     <Compile Include="AdminAccount\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminAccount\AdminLogin.aspx.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    <Compile Include="AdminAccount\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminAccount\AdminLogin.aspx.designer.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    <Compile Include="AdminAccount\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminAccount\Department.aspx.cs">
       <DependentUpon>Department.aspx</DependentUpon>
@@ -325,19 +328,19 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="DoctorAccount\Appointment.aspx.cs">
-      <DependentUpon>Appointment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DoctorAccount\Appointment.aspx.designer.cs">
-      <DependentUpon>Appointment.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DoctorAccount\BedAllotment.aspx.cs">
       <DependentUpon>BedAllotment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DoctorAccount\BedAllotment.aspx.designer.cs">
       <DependentUpon>BedAllotment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorAccount\Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorAccount\Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
     </Compile>
     <Compile Include="DoctorAccount\BloodBank.aspx.cs">
       <DependentUpon>BloodBank.aspx</DependentUpon>
@@ -391,11 +394,11 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />

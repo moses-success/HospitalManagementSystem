@@ -9,7 +9,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                      <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 

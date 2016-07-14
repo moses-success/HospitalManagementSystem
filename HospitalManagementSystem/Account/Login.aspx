@@ -7,11 +7,13 @@
 
 
     <!-- BOOTSTRAP STYLES-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+   
     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    
     <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" /> 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -37,7 +39,7 @@
                     <div class="col-md-6 col-sm-4 col-xs-12">
 
                         <span id="logo" class="alert alert-info">
-                            <img src="assets/img/logo.png" />
+                            <img src="assets/img/Logo1.jpg" />
                         </span>
 
                         <br />

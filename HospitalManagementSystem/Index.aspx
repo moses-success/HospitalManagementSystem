@@ -19,6 +19,12 @@
 	<link href="assets/css/font-awesome.css" rel="stylesheet" />
 	<!-- CUSTOM STYLES-->
 	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<style type="text/css">
+		.auto-style1 {
+			font-weight: 300;
+			height: 146px;
+		}
+	</style>
 </head>
 
 	<body class="home">
@@ -28,14 +34,15 @@
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand"  href="Index.aspx">
+					<img src="assets/img/Logo1.jpg" /></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li class="active-link"><a href="Index.aspx">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
-					<li><a class="btn " href="Login.aspx">SIGN IN / SIGN UP</a></li>
+					<li><a href="Account/Login.aspx">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -46,8 +53,8 @@
 	<header id="head">
 		<div class="container">
 			<div class="row">
-				<h1 class="lead">Welcome to Marymount Hospital</h1>
-			<p class="lead2">Founded in 1949 by the Sisters of St. Joseph of the Third Order of St. Francis, </p>
+				<h3 class="lead">Welcome to  Adweso Clinic</h3>
+			
 				
 			</div>
 		</div>
@@ -57,11 +64,18 @@
 	<!-- Intro -->
 	<div class="container text-center">
 		<br> <br>
-		<h2 class="thin">With the outstanding clinical, research and educational abilities of Cleveland Clinic, Marymount maintains a strong commitment to the communities we serve.</h2>
-		<p class="text-muted">
+		<h4>With the outstanding clinical, research and educational abilities of Adweso Clinic, It maintains a strong commitment to the communities we serve.</h4>
+		<blockquote>
 			
-Founded in 1949 by the Sisters of St. Joseph of the Third Order of St. Francis, Marymount Hospital has been blending compassionate patient care with exceptional medical expertise and advanced technology. Marymount Hospital is a 315-bed acute care hospital, serving communities in southern and southeastern Cuyahoga County.
-		</p>
+Adweso Clinic is a prestigious hospital situated in the heart of Koforidua
+ with a very large patient capacity. This number is increasing at a rapid 
+pace with each passing day. The Management of the hospital is concerned with 
+the increasing effort in keeping the records of the patients and recording
+ their activities. The hospital also keeps the information of its employees.
+ With an eye on the future, the Senior Management of Adweso Clinic has decided 
+to shift to a computerized hospital Management and Information System, which may
+ keep the records of its patients, employees, and medical tests
+		</blockquote>
 	</div>
 	<!-- /Intro-->
 		

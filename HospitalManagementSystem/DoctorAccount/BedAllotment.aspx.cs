@@ -8,13 +8,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HospitalManagementSystem.DoctorAccount
+namespace HospitalManagementSystem
 {
     public partial class BedAllotment : System.Web.UI.Page
     {
-
-
-
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["AllConnection"].ConnectionString);
         SqlCommand command = new SqlCommand();
 
@@ -79,5 +76,4 @@ namespace HospitalManagementSystem.DoctorAccount
             InsertBedAllot();
         }
     }
-    
-  }
+}

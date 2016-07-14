@@ -10,7 +10,7 @@
 
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                      <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 
@@ -187,10 +187,10 @@
 
                                                 <asp:Label ID="label1" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
                                                     Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
-                                                <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name">
+                                                <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="PatientName" DataValueField="PatientName">
                                                     <asp:ListItem></asp:ListItem>
                                                 </asp:DropDownList>
-                                                <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
+                                                <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [PatientName] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                 <br />
 
                                                 <asp:TextBox runat="server" ID="casehistroytxt" Width="600px" Height="120px" CssClass="form-control" placeholder="Case Histroy" TextMode="MultiLine"></asp:TextBox>

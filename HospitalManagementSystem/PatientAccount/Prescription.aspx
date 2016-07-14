@@ -71,7 +71,7 @@
 
                                     </ul>
                                 </div>
-                                 <asp:Label ID="lb1" runat="server" CssClass="label label-info" ></asp:Label>
+                                 <asp:Label ID="lb1" runat="server" CssClass="label label-info" Font-Bold="True" Font-Size="15pt"  ></asp:Label>
                                 <table class="table table-responsive">
 
                                     <tbody>

@@ -11,7 +11,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                    <img src="../assets/img/Logo1.jpg" alt="LOGO"/> 
 
                 </a>
 
@@ -146,7 +146,7 @@
            
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
                         <div class="div-square">
-                            <a href="../PatientAccount/OperationHistory.aspx">
+                            <a href="../PatientAccount/AdmitHistroy.aspx">
                                 <i class="fa fa-list-alt fa-3x"></i>
                                 <h4>Operational Report</h4>
                             </a>

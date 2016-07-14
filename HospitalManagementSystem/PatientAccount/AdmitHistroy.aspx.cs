@@ -38,28 +38,35 @@ namespace HospitalManagementSystem.PatientAccount
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            string name = Session["[PatientName]"].ToString();
-
-
-            lb1.Text = "WELLCOME:: " + Session["[PatientName]"];
-
-            command = Commander("[dbo].[spSelectItems]");
-            command.Parameters.AddWithValue("@patient", name);
-
-
-            da.SelectCommand = command;
-
-            DataSet ds = new DataSet();
-
-            da.Fill(ds);
-
-            if (ds.Tables[0].Rows.Count > 0)
+            if (Page.IsValid)
             {
-               
-                lbl_patientName.Text = ds.Tables[0].Rows[0]["PatientName"].ToString();
-                lbl_bednumber.Text = ds.Tables[0].Rows[0]["BedNumber"].ToString();
-                lbl_allotment.Text = ds.Tables[0].Rows[0]["Allotment"].ToString();
-                lbl_discharge.Text = ds.Tables[0].Rows[0]["Discharge"].ToString();
+                string name = Session["[PatientName]"].ToString();
+
+
+                lb1.Text = "WELLCOME:: " + Session["[PatientName]"];
+
+                command = Commander("[dbo].[spSelectItems]");
+                command.Parameters.AddWithValue("@patient", name);
+
+
+                da.SelectCommand = command;
+
+                DataSet ds = new DataSet();
+
+                da.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    lbl_patientName.Text = ds.Tables[0].Rows[0]["PatientName"].ToString();
+                    lbl_bednumber.Text = ds.Tables[0].Rows[0]["BedNumber"].ToString();
+                    lbl_allotment.Text = ds.Tables[0].Rows[0]["Allotment"].ToString();
+                    lbl_discharge.Text = ds.Tables[0].Rows[0]["Discharge"].ToString();
+                }
+            }
+            else
+            {
+                Label1.Text = "Error";
             }
         }
     }

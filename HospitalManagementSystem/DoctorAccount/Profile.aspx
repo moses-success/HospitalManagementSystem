@@ -8,7 +8,7 @@
 
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                     <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 
@@ -16,7 +16,7 @@
 
                     <li>
                         <hr />
-                        <a href="DocDashBorad.aspx">
+                        <a href="DocDashBoard.aspx">
                             <i class="fa fa-dashboard "></i><span class="Link">Dashboard</span></a>
                     </li>
 

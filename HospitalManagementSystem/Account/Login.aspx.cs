@@ -70,7 +70,7 @@ namespace HospitalManagementSystem
             catch (Exception ex)
             {
                 ex.ToString();
-                Label1.Text = "Error ";
+                Label1.Text = "Check Details and Login Again  ";
                 Label1.CssClass = "alert alert-danger";
 
             }

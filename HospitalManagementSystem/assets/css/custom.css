@@ -43,7 +43,7 @@ body {
 	font-weight: 900;
 	padding-bottom:10px;
 	text-transform: uppercase;
-	color:#0099cc;
+	color:#e77440 ;
 	font-size: 20px;
 	margin-bottom: 30px;
 	
@@ -52,7 +52,7 @@ body {
 
 
 .navbar-inverse {
-background-color:#666699;
+background-color:#006eaf;
 border-color: #F0F0F0;
 
 }
@@ -97,7 +97,7 @@ border-color: #F0F0F0;
 	  
 }
 .sidebar-collapse .nav {
-	background-color:#666699;
+	background-color:#006eaf;
 	margin-top:5px;
 	border-bottom:1px solid #efefef;
    
@@ -116,7 +116,7 @@ border-color: #F0F0F0;
 .sidebar-collapse .nav > li > a:focus {
 	
 	 width: 250px;
-	background-color:#9999FF !important;
+	background-color:#e77440 !important;
 	outline:0;
 
 }
@@ -154,14 +154,14 @@ border-color: #F0F0F0;
 		text-decoration:none;
 	}
 
- .logo{
+ #logo{
 		border-radius:20px;
-		padding-left:20px;
-		padding:100px;
+		height:126px;
+		width:251px;
 	}
  
 .active-link {
-	background-color:#9999FF;
+	background-color:#e77440;
 
 	 width: 250px;
 	
@@ -183,7 +183,7 @@ border-color: #F0F0F0;
 }
 
 	.div-square > a, .div-square > a .div-square > a, .div-square > a:focus {
-		color: #0099cc;
+		color: #006eaf;
 		text-decoration: none;
 		
 	}
@@ -213,13 +213,13 @@ border-color: #F0F0F0;
 		 text-transform: uppercase;
 	}
    .navtab .fa {
-		color:#1ac6ff;
+		color:#e77440;
 	}
    .navtab a {
 	   color:#fff;
    }
    .navtab{
-	   background-color:#666699;
+	   background-color:#006eaf;
 	   font-size:20px;
 	   text-transform: uppercase;
 	   text-emphasis-color:#fff;
@@ -252,7 +252,7 @@ border-color: #F0F0F0;
 	FOOTER STYLES     
 	=============================================*/
 .footer {
-	background-color:#666699;
+	background-color:#006eaf;
 	width:100%;
 	color:#fff;
 	padding:20px 50px 20px 50px;
@@ -286,16 +286,18 @@ border-color: #F0F0F0;
 	=============================================*/
 
 
-.table-condensed tbody
+.table-responsive tbody
 {
-	color:#0099cc;
+	color:#006eaf;
 
 }
 
 #lb1{
-	
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-align:center;
 font-weight:bold;
 font-size:15px;
+
 }
 
 
@@ -317,7 +319,7 @@ font-size:15px;
 		z-index: 1;
 		position: absolute;
 		width: 250px;
-		background-color:#666699;
+		background-color:#006eaf;
 		min-height:1090px;
 		margin-top:10px;
 		

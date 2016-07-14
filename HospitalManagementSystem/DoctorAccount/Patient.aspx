@@ -11,7 +11,7 @@
 
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                      <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 
@@ -98,7 +98,7 @@
                                                         <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
                                                         <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
                                                         <asp:BoundField DataField="Sex" HeaderText="Sex" SortExpression="Sex" />
-                                                        <asp:BoundField DataField="DateOfBrith" HeaderText="DateOfBrith" SortExpression="DateOfBrith" />
+                                                        <asp:BoundField DataField="DateOfBrith" HeaderText="DateOfBrith" SortExpression="DateOfBrith" DataFormatString="{0:D}"/>
                                                         <asp:BoundField DataField="BloodGroup" HeaderText="BloodGroup" SortExpression="BloodGroup" />
                                                         <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">

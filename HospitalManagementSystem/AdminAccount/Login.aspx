@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="HospitalManagementSystem.AdminAccount.AdminLogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="HospitalManagementSystem.AdminAccount.AdminLogin" %>
 
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
 						<h4 class="page-head-line">Sign in Admin</h4>
 
 					</div>
-                    
+					
 
 				</div>
 
@@ -42,7 +42,7 @@
 							<img src="../assets/img/logo.png" />
 						</span>
 						<br />
-                        <asp:Label ID="Label1" runat="server" ></asp:Label>
+						<asp:Label ID="Label1" runat="server" ></asp:Label>
 						<br />
 						<div class="panel panel-default">
 							<div class="panel-heading"><strong>Admin Login</strong></div>

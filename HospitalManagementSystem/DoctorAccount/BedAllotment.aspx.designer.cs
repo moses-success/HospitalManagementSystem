@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HospitalManagementSystem.DoctorAccount {
+namespace HospitalManagementSystem {
     
     
     public partial class BedAllotment {

@@ -7,7 +7,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                     <img src="../assets/img/Logo1.jpg" />
 
                 </a>
               
@@ -162,9 +162,9 @@
                                                 <br />
                                                 <asp:Label ID="label1" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
                                                   Font-Size="15pt" ForeColor="#1b9703"></asp:Label> 
-                                                <asp:DropDownList runat="server" CssClass="form-control" Width="600px" ID="Patienttxt"  DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name" ValidationGroup="bloodbank">    
+                                                <asp:DropDownList runat="server" CssClass="form-control" Width="600px" ID="Patienttxt"  DataSourceID="SqlDataSourcePatient" DataTextField="PatientName" DataValueField="PatientName" ValidationGroup="bloodbank">    
                                                 </asp:DropDownList>
-                                                <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
+                                                <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [PatientName] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                  <br />
                                                 <asp:Label ID="label2" runat="server" class="labeldept" Text=" Age :" Font-Bold="True"
                                                   Font-Size="15pt" ForeColor="#1b9703"></asp:Label> 

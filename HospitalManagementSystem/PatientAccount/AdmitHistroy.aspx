@@ -11,7 +11,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                    <img src="../assets/img/Logo1.jpg" /> 
 
                 </a>
 
@@ -77,18 +77,18 @@
                                 <div>
                                 </div>
                                 <br />
-                                <asp:Label ID="lb1" runat="server" CssClass="label label-info" ></asp:Label>
+                                <asp:Label ID="lb1" runat="server" CssClass="label label-info" Font-Bold="True" Font-Size="15pt"  ></asp:Label>
 
                                 <br />
 
                                
-                                <asp:Label ID="Label1" runat="server" CssClass="label label-info"  ></asp:Label>
+                                <asp:Label ID="Label1" runat="server" CssClass="label label-info" Font-Bold="True" Font-Size="15pt"  ></asp:Label>
 
 
                                 <br />
 
 
-                                <table class="table table-condensed table-bordered">
+                                <table class=" table table-responsive">
 
                                     <tbody>
                                         <tr>

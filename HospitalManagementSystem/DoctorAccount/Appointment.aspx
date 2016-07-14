@@ -10,7 +10,7 @@
 
 
                     <a id="logo" href="Default.aspx">
-                        <img src="../assets/img/logo.png" />
+                         <img src="../assets/img/Logo1.jpg" />
 
                     </a>
 
@@ -87,7 +87,7 @@
                                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                                                         <asp:BoundField DataField="DoctorName" HeaderText="DoctorName" SortExpression="DoctorName" />
                                                         <asp:BoundField DataField="PatientName" HeaderText="PatientName" SortExpression="PatientName" />
-                                                        <asp:BoundField DataField="BirthDate" HeaderText="BirthDate" SortExpression="BirthDate" />
+                                                        <asp:BoundField DataField="BirthDate" HeaderText="BirthDate" SortExpression="BirthDate" DataFormatString="{0:D}" />
                                                         <asp:TemplateField HeaderText="Action" ShowHeader="False">
                                                             <EditItemTemplate>
                                                                 <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CssClass="btn btn-primary" CommandName="Update" Text="Update"></asp:LinkButton>
@@ -143,7 +143,7 @@
                                         </div>
 
 
-                                        <div class="tab-pane fade" id="Add-appointment">
+                                        <div class="tab-pane fade " id="Add-appointment">
                                             <br />
 
                                             <div class="panel panel-primary">
@@ -155,17 +155,14 @@
                                                     <asp:TextBox runat="server" ID="nametxt" CssClass="form-control" placeholder="Doctor's Name" Width="600px" ToolTip="Doctor's Name" ValidationGroup="appoint"></asp:TextBox>
                                                     <asp:RequiredFieldValidator runat="server" ID="valdatenametxt" ControlToValidate="nametxt" ErrorMessage="Name  Required" ForeColor="Red" ValidationGroup="appoint"></asp:RequiredFieldValidator>
                                                     &nbsp;
-                                               <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationGroup="appoint" ValidationExpression="^[a-zA-Z\s]*$"></asp:RegularExpressionValidator>
-
+                                                  <asp:RegularExpressionValidator ID="RegularExpre" runat="server" ErrorMessage="Enter A Valid Name" ControlToValidate="nametxt" Font-Bold="True" ForeColor="Red" ValidationGroup="appoint" ValidationExpression="^[a-zA-Z\s]*$"></asp:RegularExpressionValidator>
                                                     <br />
-
-
                                                     <asp:Label ID="labeldept" runat="server" class="labeldept" Text=" Patient Name :" Font-Bold="True"
                                                         Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
-                                                    <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="Name" DataValueField="Name" ValidationGroup="appoint">
+                                                    <asp:DropDownList runat="server" CssClass="form-control" ID="Patienttxt" Width="300px" DataSourceID="SqlDataSourcePatient" DataTextField="PatientName" DataValueField="PatientName" ValidationGroup="appoint">
                                                     </asp:DropDownList>
 
-                                                    <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Name] FROM [tbl_Patient]"></asp:SqlDataSource>
+                                                    <asp:SqlDataSource ID="SqlDataSourcePatient" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [PatientName] FROM [tbl_Patient]"></asp:SqlDataSource>
                                                     <br />
                                                     <asp:Label ID="doblabel" runat="server" class="labeldept" Text="Date for Appointment:" Font-Bold="True" Font-Size="15pt" ForeColor="#1b9703"></asp:Label>
 

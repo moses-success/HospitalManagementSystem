@@ -8,7 +8,7 @@
             <div class="sidebar-collapse">
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                    <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 
@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h4 class="page-head-line">Manage Dapartment   
-                        <span class="doctor">Doctor</span><span class="patient">Patient</span><span class="nurse">Nurse</span>
+                  
                         </h4>
 
                         <div class="panel panel-default">

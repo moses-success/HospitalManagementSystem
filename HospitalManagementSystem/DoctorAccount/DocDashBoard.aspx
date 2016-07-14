@@ -10,7 +10,7 @@
 
 
                 <a id="logo" href="Default.aspx">
-                    <img src="../assets/img/logo.png" />
+                     <img src="../assets/img/Logo1.jpg" />
 
                 </a>
 
@@ -175,13 +175,29 @@
 
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                         <div class="col-md-6 col-xs-12">
 
                             <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <i class="table"></i>&nbsp;&nbsp;  Notice Board
-                                </div>
-                                <div class="panel-body">
+                                <div>
+                                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-condensed table-hover"  AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" DataFormatString="{0:D}" />
+                                            <asp:BoundField DataField="Notice" HeaderText="Notice" SortExpression="Notice" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
+
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:AllConnection %>" SelectCommand="SELECT [Date], [Notice] FROM [tbl_NoticeBoard]"></asp:SqlDataSource>
                                 </div>
 
                             </div>

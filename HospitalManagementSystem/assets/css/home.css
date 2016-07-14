@@ -1,38 +1,41 @@
 ﻿/* Header */
 #head {
-    background-image: url('../img/homebg.jpg');
-    background-size: cover;
-    min-height: 520px;
-    text-align: center;
-    padding-top: 240px;
-    color: white;
-    font-family: "Open sans", Helvetica, Arial;
-    font-weight: 300;
+	background-image: url('../img/homebg.jpg');
+	background-size: cover;
+	min-height: 520px;
+	text-align: center;
+	padding-top: 240px;
+	color: white;
+	font-family: "Open sans", Helvetica, Arial;
+	font-weight: 300;
 }
 #head.secondary { height:100px; min-height: 100px; padding-top:0px; }
 	#head .lead { font-family:"Open sans", Helvetica, Arial;
-                   font-size:44px; 
-                   margin-bottom:6px; 
-                   color:white;
-                    line-height:1.15em;
-                    float:left;
+				   font-size:44px; 
+				   margin-bottom:6px; 
+				   color:white;
+					line-height:1.15em;
+					float:left;
 	} 
 
 
-    .active-link{
-        color:#fff;
-    }
+	.active-link{
+		color:#fff;
+	}
 
-    #head .lead2
-    {
-         font-size:20px; 
-                   margin-bottom:6px; 
-                   color:white;
-                    line-height:1.15em;
-                    float:left;
-                   font-weight:800;
-                   
-    }
+	
+
+
+	#head .lead2
+	{
+		 font-size:20px; 
+				   margin-bottom:6px; 
+				   color:white;
+					line-height:1.15em;
+					float:left;
+				   font-weight:800;
+				   
+	}
 
 	#head .tagline { color:rgba(255,255,255,0.75); margin-bottom:25px; }
 		#head .tagline a { color:#fff; } 
@@ -52,17 +55,17 @@
 /* Autohide navbar */
 .slideUp { top:-100px; }
 .headroom { 
-    -webkit-transition: all 0.4s ease-out; 
-    -moz-transition: all 0.4s ease-out; 
-    -o-transition: all 0.4s ease-out; 
-    transition: all 0.4s ease-out; 
-    background-color:#121a31;
+	-webkit-transition: all 0.4s ease-out; 
+	-moz-transition: all 0.4s ease-out; 
+	-o-transition: all 0.4s ease-out; 
+	transition: all 0.4s ease-out; 
+	background-color:#121a31;
 }
 
 .avbar-default
 {
-    background-color:#121a31;
-    color:white;
+	background-color:#121a31;
+	color:white;
 }
 
 /* Typography */

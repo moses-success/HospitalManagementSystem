@@ -75,7 +75,7 @@
                                 <div>
                                 </div>
                                 <br />
-                                <asp:Label ID="lb1" runat="server" CssClass="label label-info"></asp:Label>
+                                <asp:Label ID="lb1" runat="server" CssClass="label label-info" Font-Bold="True" Font-Size="15pt" ></asp:Label>
 
                                 <br />
                                 <asp:Label ID="Label1" runat="server" CssClass="label label-info"></asp:Label>
